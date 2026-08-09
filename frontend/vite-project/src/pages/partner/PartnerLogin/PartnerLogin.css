@@ -1,0 +1,125 @@
+.partner-login {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) 1fr;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #f4f6fa;
+}
+
+.partner-login__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.partner-login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.partner-login__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #12305c;
+  margin: 0;
+}
+
+.partner-login__subtitle {
+  font-size: 0.9375rem;
+  color: #64748b;
+  margin: -0.5rem 0 0.5rem 0;
+}
+
+.partner-login__password-row {
+  position: relative;
+}
+
+.partner-login__forgot-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #2f6fed;
+  text-decoration: none;
+}
+
+.partner-login__forgot-link:hover {
+  text-decoration: underline;
+}
+
+.partner-login__remember {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: #33415c;
+  cursor: pointer;
+}
+
+.partner-login__divider {
+  position: relative;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin: 0.25rem 0;
+}
+
+.partner-login__divider::before,
+.partner-login__divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 38%;
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+.partner-login__divider::before {
+  left: 0;
+}
+
+.partner-login__divider::after {
+  right: 0;
+}
+
+.partner-login__footer-note {
+  font-size: 0.8125rem;
+  color: #94a3b8;
+  text-align: center;
+  margin: 0.5rem 0 0 0;
+}
+
+.partner-login__footer-note a {
+  color: #12305c;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .partner-login {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-login__main {
+    padding: 1.5rem;
+  }
+}
+
+.partner-login__error {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #c53939;
+  background-color: #fbe9e9;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin: 0;
+}

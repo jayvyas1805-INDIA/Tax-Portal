@@ -1,0 +1,27 @@
+.profile-tabs {
+  display: flex;
+  gap: 1.75rem;
+  border-bottom: 1px solid #e6eaf1;
+  padding: 0 1.5rem;
+}
+
+.profile-tabs__tab {
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #7a8699;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.profile-tabs__tab:hover {
+  color: #12305c;
+}
+
+.profile-tabs__tab--active {
+  color: #12305c;
+  border-bottom-color: #12305c;
+}

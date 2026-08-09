@@ -1,0 +1,51 @@
+.kyc-step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.75rem;
+}
+
+.kyc-step__header-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0 0 0.35rem 0;
+}
+
+.kyc-step__header-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.kyc-step__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 1.5rem;
+}
+
+.kyc-step__uploads {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.kyc-step__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e6eaf1;
+}
+
+@media (max-width: 640px) {
+  .kyc-step__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .kyc-step__actions {
+    flex-direction: column-reverse;
+  }
+}

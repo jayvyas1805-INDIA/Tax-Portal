@@ -1,0 +1,81 @@
+.wizard-side-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #0c2140;
+  color: #ffffff;
+  padding: 2.75rem 2.5rem;
+  min-height: 100%;
+  overflow: hidden;
+  gap: 1.5rem; /* Controls spacing between Heading, Description, Image & Features */
+}
+
+.wizard-side-panel__heading {
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.wizard-side-panel__description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #c7d4e6;
+  margin: 0;
+}
+
+.wizard-side-panel__photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0;
+}
+
+.wizard-side-panel__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.wizard-side-panel__feature {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.wizard-side-panel__feature-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+}
+
+.wizard-side-panel__feature-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+}
+
+.wizard-side-panel__feature-text {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #aebedb;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .wizard-side-panel {
+    padding: 2rem;
+    gap: 1.25rem;
+  }
+}

@@ -1,0 +1,39 @@
+.referral-trends-chart {
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.referral-trends-chart__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0 0 0.75rem 0;
+}
+
+.referral-trends-chart__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.referral-trends-chart__year-select {
+  padding: 6px 12px;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.referral-trends-chart__year-select:focus {
+  outline: none;
+  border-color: #12305c;
+}
+
+.referral-trends-chart_dropdown{
+  background-color: white;
+  color: #12305c
+}

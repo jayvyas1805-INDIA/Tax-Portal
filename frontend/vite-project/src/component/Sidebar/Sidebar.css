@@ -1,0 +1,36 @@
+.sidebar {
+  width: 260px;
+  background: #062b62;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+}
+
+.sidebar li {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background: rgba(255,255,255,.1);
+}
+
+.sidebar button {
+  padding: 12px;
+  border: none;
+  background: white;
+  color: #062b62;
+  border-radius: 8px;
+}

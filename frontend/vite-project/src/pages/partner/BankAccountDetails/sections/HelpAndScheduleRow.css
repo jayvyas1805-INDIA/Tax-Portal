@@ -1,0 +1,39 @@
+.help-and-schedule-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.help-and-schedule-row__card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.help-and-schedule-row__card span {
+  font-size: 1.25rem;
+}
+
+.help-and-schedule-row__title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.help-and-schedule-row__text {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #33415c;
+  margin: 0.1rem 0 0 0;
+}
+
+@media (max-width: 640px) {
+  .help-and-schedule-row {
+    grid-template-columns: 1fr;
+  }
+}

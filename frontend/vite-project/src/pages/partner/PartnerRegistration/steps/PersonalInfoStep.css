@@ -1,0 +1,67 @@
+.personal-info-step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.75rem;
+}
+
+.personal-info-step__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.personal-info-step__header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 8px;
+  background-color: #eef4ff;
+  font-size: 1rem;
+}
+
+.personal-info-step__header-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0;
+}
+
+.personal-info-step__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 1.5rem;
+}
+
+.personal-info-step__actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e6eaf1;
+}
+
+@media (max-width: 640px) {
+  .personal-info-step__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.personal-info-step__error {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #c53939;
+  background-color: #fbe9e9;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin: -0.5rem 0 0 0;
+}
+
+
+
+.personal-info-step__radio-group{
+  background-color: #f5f7fa;
+  padding: 0.5rem;
+  color: #12305c;
+}

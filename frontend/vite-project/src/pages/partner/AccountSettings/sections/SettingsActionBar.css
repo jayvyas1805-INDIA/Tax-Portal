@@ -1,0 +1,29 @@
+.settings-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.settings-action-bar__warning {
+  font-size: 0.8125rem;
+  color: #b8792a;
+  margin: 0;
+}
+
+.settings-action-bar__buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .settings-action-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

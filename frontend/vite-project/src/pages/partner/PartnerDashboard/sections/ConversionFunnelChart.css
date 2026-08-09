@@ -1,0 +1,46 @@
+.conversion-funnel-chart {
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.conversion-funnel-chart__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0 0 1.25rem 0;
+}
+
+.conversion-funnel-chart__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.conversion-funnel-chart__row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.conversion-funnel-chart__bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: width 0.3s ease;
+  min-width: 3rem;
+}
+
+.conversion-funnel-chart__label {
+  flex-shrink: 0;
+  width: 80px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #33415c;
+}

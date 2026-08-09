@@ -1,0 +1,29 @@
+.verify-documents-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #0c2140;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.verify-documents-banner__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.verify-documents-banner__description {
+  font-size: 0.8125rem;
+  color: #c7d4e6;
+  margin: 0;
+}
+
+.verify-documents-banner .btn--secondary {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  white-space: nowrap;
+}

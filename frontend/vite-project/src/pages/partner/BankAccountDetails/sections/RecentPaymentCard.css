@@ -1,0 +1,57 @@
+.recent-payment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  background: linear-gradient(135deg, #12305c 0%, #1a3b6b 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.recent-payment-card__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.recent-payment-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recent-payment-card__label {
+  font-size: 0.75rem;
+  color: #9db6dd;
+}
+
+.recent-payment-card__value {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.recent-payment-card__utr {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.75rem 0.9rem;
+}
+
+.recent-payment-card__utr-value {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-family: monospace;
+  word-break: break-all;
+}
+
+.recent-payment-card .btn--primary {
+  background-color: #ffffff;
+  color: #12305c;
+  width: 100%;
+}
+
+.recent-payment-card .btn--primary:hover {
+  background-color: #eef4ff;
+}

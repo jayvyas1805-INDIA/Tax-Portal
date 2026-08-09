@@ -1,0 +1,48 @@
+.select-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.select-field__label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #33415c;
+}
+
+.select-field__optional {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.select-field__input {
+  font-family: inherit;
+  font-size: 0.9375rem;
+  color: #1e293b;
+  padding: 0.7rem 0.875rem;
+  border: 1.5px solid #d7dee8;
+  border-radius: 8px;
+  background-color: #ffffff;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2333415c' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.select-field__input:focus {
+  border-color: #12305c;
+  box-shadow: 0 0 0 3px rgba(18, 48, 92, 0.12);
+}
+
+.select-field__input:invalid {
+  color: #9aa5b5;
+}

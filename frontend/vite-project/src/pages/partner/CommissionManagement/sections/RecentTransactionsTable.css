@@ -1,0 +1,93 @@
+.recent-transactions-table {
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.recent-transactions-table__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.recent-transactions-table__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0;
+}
+
+.recent-transactions-table__controls {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.recent-transactions-table__search {
+  font-family: inherit;
+  font-size: 0.8125rem;
+  padding: 0.5rem 0.9rem;
+  border: 1.5px solid #d7dee8;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 8px;
+  outline: none;
+  min-width: 200px;
+}
+
+.recent-transactions-table__search:focus {
+  border-color: #12305c;
+}
+
+.recent-transactions-table__filter-btn {
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #33415c;
+  background-color: #ffffff;
+  border: 1.5px solid #d7dee8;
+  border-radius: 8px;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+}
+
+.recent-transactions-table__scroll {
+  overflow-x: auto;
+}
+
+.recent-transactions-table__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.recent-transactions-table__table th {
+  text-align: left;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #e6eaf1;
+  white-space: nowrap;
+}
+
+.recent-transactions-table__table td {
+  padding: 0.85rem 0.75rem;
+  border-bottom: 1px solid #f1f4f8;
+  color: #33415c;
+  white-space: nowrap;
+}
+
+.recent-transactions-table__id {
+  font-weight: 700;
+  color: #12305c;
+}
+
+.recent-transactions-table__amount {
+  font-weight: 700;
+}

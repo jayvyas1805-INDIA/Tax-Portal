@@ -1,0 +1,61 @@
+.available-balance-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #12305c 0%, #1a3b6b 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.available-balance-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.available-balance-card__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #c7d4e6;
+  margin: 0;
+}
+
+.available-balance-card__amount {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem 0;
+}
+
+.available-balance-card__breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.5rem 0 0.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.available-balance-card__breakdown div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.available-balance-card__breakdown-label {
+  color: #9db6dd;
+}
+
+.available-balance-card__breakdown-value {
+  font-weight: 700;
+}
+
+.available-balance-card .btn--primary {
+  background-color: #ffffff;
+  color: #12305c;
+  width: 100%;
+}
+
+.available-balance-card .btn--primary:hover {
+  background-color: #eef4ff;
+}

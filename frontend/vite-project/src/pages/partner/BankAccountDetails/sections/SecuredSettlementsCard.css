@@ -1,0 +1,41 @@
+.secured-settlements-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #eef4ff;
+  border: 1px solid #d9e6fb;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.secured-settlements-card__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0;
+}
+
+.secured-settlements-card__description {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #33415c;
+  margin: 0;
+}
+
+.secured-settlements-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.secured-settlements-card__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #12305c;
+}

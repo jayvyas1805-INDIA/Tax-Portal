@@ -1,0 +1,12 @@
+.profile-form-tab {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 1.5rem;
+  padding: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .profile-form-tab {
+    grid-template-columns: 1fr;
+  }
+}

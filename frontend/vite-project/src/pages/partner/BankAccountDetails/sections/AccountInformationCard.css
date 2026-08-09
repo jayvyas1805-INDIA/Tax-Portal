@@ -1,0 +1,77 @@
+.account-information-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.account-information-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0;
+}
+
+.account-information-card__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 1.5rem;
+}
+
+.account-information-card__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.account-information-card__section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #b8792a;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.account-information-card__alert {
+  display: flex;
+  gap: 0.6rem;
+  background-color: #fbe9e9;
+  border: 1px solid #f3c8c8;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+}
+
+.account-information-card__alert-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #c53939;
+  margin: 0 0 0.15rem 0;
+}
+
+.account-information-card__alert-text {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #a13030;
+  margin: 0;
+}
+
+.account-information-card__actions {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e6eaf1;
+}
+
+@media (max-width: 640px) {
+  .account-information-card__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .account-information-card__actions {
+    flex-direction: column-reverse;
+  }
+}

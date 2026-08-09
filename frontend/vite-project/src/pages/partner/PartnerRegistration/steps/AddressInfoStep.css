@@ -1,0 +1,62 @@
+.address-info-step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.75rem;
+}
+
+.address-info-step__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.address-info-step__header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 8px;
+  background-color: #eef4ff;
+  font-size: 1rem;
+}
+
+.address-info-step__header-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0;
+}
+
+.address-info-step__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.address-info-step__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 1.5rem;
+}
+
+.address-info-step__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e6eaf1;
+}
+
+@media (max-width: 640px) {
+  .address-info-step__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .address-info-step__actions {
+    flex-direction: column-reverse;
+  }
+}

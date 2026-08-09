@@ -1,0 +1,32 @@
+.notifications-center {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #f4f6fa;
+}
+
+.notifications-center__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.notifications-center__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem 2rem 2.5rem 2rem;
+}
+
+@media (max-width: 900px) {
+  .notifications-center {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-center__main {
+    padding: 1.25rem;
+  }
+}

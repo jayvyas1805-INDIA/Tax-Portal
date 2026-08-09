@@ -1,0 +1,70 @@
+.commission-management {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #f4f6fa;
+}
+
+.commission-management__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.commission-management__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem 2.5rem 2rem;
+}
+
+.commission-management__top-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.commission-management__stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.commission-management__row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media (max-width: 1100px) {
+  .commission-management__top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .commission-management__stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .commission-management {
+    grid-template-columns: 1fr;
+  }
+
+  .commission-management__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .commission-management__stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .commission-management__main {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,74 @@
+.referrals-table {
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.referrals-table__scroll {
+  overflow-x: auto;
+}
+
+.referrals-table__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.referrals-table__table th {
+  text-align: left;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #e6eaf1;
+  white-space: nowrap;
+}
+
+.referrals-table__table td {
+  padding: 0.85rem 0.75rem;
+  border-bottom: 1px solid #f1f4f8;
+  color: #33415c;
+  vertical-align: middle;
+}
+
+.referrals-table__id {
+  font-weight: 700;
+  color: #12305c;
+  white-space: nowrap;
+}
+
+.referrals-table__client-name {
+  font-weight: 700;
+  margin: 0;
+}
+
+.referrals-table__client-contact {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin: 0.1rem 0 0 0;
+}
+
+.referrals-table__value {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.referrals-table__action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  border: 1px solid #e6eaf1;
+  background-color: #f8fafc;
+  cursor: pointer;
+  color: #12305c;
+}
+
+.referrals-table__action-btn:hover {
+  border-color: #12305c;
+}

@@ -1,0 +1,66 @@
+.commission-earnings-chart {
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.commission-earnings-chart__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.commission-earnings-chart__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0;
+}
+
+.commission-earnings-chart__range {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7a8699;
+}
+
+.commission-earnings-chart__total {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #12305c;
+  margin: 0.5rem 0 0.25rem 0;
+}
+
+.commission-earnings-chart__total-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #7a8699;
+}
+
+.commission-earnings-chart__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.commission-earnings-chart__year-select {
+  padding: 6px 12px;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  background: #fff;
+  color: #12305c;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.commission-earnings-chart__year-select:focus {
+  outline: none;
+  border-color: #12305c;
+}
+
+.commission-earnings-chart_dropdown{
+  background-color: white;
+  color: #12305c;
+}

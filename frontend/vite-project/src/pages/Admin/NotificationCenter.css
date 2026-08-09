@@ -1,0 +1,277 @@
+.nc {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.nc__state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  font-size: 14px;
+  color: #7a839c;
+}
+
+.nc__state--error {
+  color: #d0342c;
+}
+
+.nc__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.nc__pagination button {
+  min-width: 30px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #e0e3ec;
+  background: #fff;
+  font-size: 12.5px;
+  color: #444c68;
+  cursor: pointer;
+}
+
+.nc__pagination button.is-active {
+  background: #3b6bf0;
+  border-color: #3b6bf0;
+  color: #fff;
+}
+
+.nc__pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nc__topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nc__topbar h1 {
+  margin: 0 0 4px;
+  font-size: 21px;
+  color: #1c2338;
+}
+
+.nc__topbar p {
+  margin: 0;
+  font-size: 13px;
+  color: #7a839c;
+}
+
+.nc__topbar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.nc__btn {
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nc__btn--ghost {
+  background: #fff;
+  border: 1px solid #e0e3ec;
+  color: #444c68;
+}
+
+.nc__btn--primary {
+  background: #0b1a3a;
+  border: none;
+  color: #fff;
+}
+
+.nc__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.nc-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #eceef4;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.nc-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #f4f5f9;
+  font-size: 16px;
+}
+
+.nc-card__value {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  color: #1c2338;
+}
+
+.nc-card__label {
+  margin: 2px 0 0;
+  font-size: 11.5px;
+  color: #99a1b8;
+}
+
+.nc__panel {
+  background: #fff;
+  border: 1px solid #eceef4;
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nc__panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eceef4;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nc__tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.nc__tab {
+  border: none;
+  background: none;
+  padding: 4px 0;
+  font-size: 12.5px;
+  color: #99a1b8;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.nc__tab--active {
+  color: #0b1a3a;
+  font-weight: 700;
+  border-color: #0b1a3a;
+}
+
+.nc__sort {
+  font-size: 12px;
+  color: #99a1b8;
+}
+
+.nc__sort strong {
+  color: #444c68;
+}
+
+.nc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nc__item {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #f3f4f9;
+}
+
+.nc__item--unread {
+  background: #f8faff;
+}
+
+.nc__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eaf0ff;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.nc__item-icon--alert {
+  background: #fdeaea;
+}
+
+.nc__item-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.nc__item-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.nc__item-title {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1c2338;
+}
+
+.nc__item-time {
+  font-size: 11px;
+  color: #99a1b8;
+  white-space: nowrap;
+}
+
+.nc__item-detail {
+  margin: 6px 0 0;
+  font-size: 12.5px;
+  color: #6a7290;
+  line-height: 1.5;
+}
+
+.nc__item-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.nc__action-btn {
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nc__action-btn--primary {
+  background: #0b1a3a;
+  border: none;
+  color: #fff;
+}
+
+.nc__action-btn--ghost {
+  background: #fff;
+  border: 1px solid #e0e3ec;
+  color: #444c68;
+}
+
+@media (max-width: 1100px) {
+  .nc__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

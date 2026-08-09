@@ -1,0 +1,139 @@
+.wizard-stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 1.5rem 1.75rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6eaf1;
+}
+
+.wizard-stepper__meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.wizard-stepper__title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0 0 0.15rem 0;
+}
+
+.wizard-stepper__subtitle {
+  font-size: 0.8125rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.wizard-stepper__percentage {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #12305c;
+  white-space: nowrap;
+}
+
+.wizard-stepper__list {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.wizard-stepper__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.wizard-stepper__node-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.wizard-stepper__node {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #94a3b8;
+  background-color: #eef1f6;
+  border: 2px solid #eef1f6;
+
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease,
+    transform 0.25s ease;
+}
+
+.wizard-stepper__node--completed {
+  background-color: #12305c;
+  border-color: #12305c;
+  color: #fff;
+}
+
+.wizard-stepper__node--active {
+  background: #fff;
+  border-color: #12305c;
+  color: #12305c;
+  transform: scale(1.08);
+}
+
+.wizard-stepper__connector {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  margin: 0 0.35rem;
+  background: #e6eaf1;
+  overflow: hidden;
+}
+
+.wizard-stepper__connector::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #12305c;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-in-out;
+}
+
+.wizard-stepper__connector--completed::after {
+  transform: scaleX(1);
+}
+
+.wizard-stepper__connector--completed {
+  background-color: #12305c;
+}
+
+.wizard-stepper__step-label {
+  margin-top: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #94a3b8;
+  text-align: center;
+
+  transition: color 0.35s ease;
+}
+
+.wizard-stepper__step-label--active {
+  color: #12305c;
+}
+
+@media (max-width: 640px) {
+  .wizard-stepper__step-label {
+    display: none;
+  }
+}

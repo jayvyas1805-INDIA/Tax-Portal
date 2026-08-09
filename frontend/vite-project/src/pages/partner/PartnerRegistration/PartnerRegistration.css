@@ -1,0 +1,67 @@
+.partner-registration {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f6fa;
+}
+
+.partner-registration {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.partner-registration__body {
+  min-height: calc(100vh - 130px);
+  min-height: calc(100dvh - 130px);
+}
+
+.partner-registration__body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) 1fr;
+}
+
+.partner-registration__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+  width: min(900px, 100%);
+  margin-inline: auto;
+}
+
+.partner-registration__form-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e6eaf1;
+  box-shadow: 0 1px 3px rgba(12, 33, 64, 0.06);
+  overflow: hidden;
+}
+
+/* .partner-registration__footer {
+  padding: 1.25rem 2rem;
+  background-color: #0c2140;
+  color: #9db6dd;
+  text-align: center;
+  font-size: 0.8125rem;
+} */
+
+@media (max-width: 900px) {
+  .partner-registration__body {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-registration__main {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .partner-registration__topbar,
+  .partner-registration__main {
+    padding: 1.25rem;
+  }
+}

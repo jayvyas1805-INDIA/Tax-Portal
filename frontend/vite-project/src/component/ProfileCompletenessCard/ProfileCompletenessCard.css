@@ -1,0 +1,46 @@
+.profile-completeness {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  background-color: #eef4ff;
+  border: 1px solid #d9e6fb;
+  border-radius: 10px;
+}
+
+.profile-completeness__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  background-color: #4f83e8;
+  font-size: 1.15rem;
+}
+
+.profile-completeness__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-completeness__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0 0 0.15rem 0;
+}
+
+.profile-completeness__description {
+  font-size: 0.8125rem;
+  color: #5b6b85;
+  margin: 0;
+}
+
+.profile-completeness__percentage {
+  flex-shrink: 0;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #12305c;
+}

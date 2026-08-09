@@ -1,0 +1,74 @@
+.recent-activity-feed {
+  background: #fff;
+  border: 1px solid #e7ebf2;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.recent-activity-feed__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.recent-activity-feed__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #183153;
+}
+
+.recent-activity-feed__view-all {
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.recent-activity-feed__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: .3s;
+}
+
+.recent-activity-feed__list.expanded {
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.recent-activity-feed__item {
+  display: flex;
+  gap: 12px;
+}
+
+.recent-activity-feed__icon {
+  width: 40px;
+  height: 40px;
+  background: #eef5ff;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+.recent-activity-feed__content {
+  flex: 1;
+}
+
+.recent-activity-feed__item-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.recent-activity-feed__item-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #7b8794;
+}

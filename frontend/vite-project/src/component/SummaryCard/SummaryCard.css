@@ -1,0 +1,73 @@
+.summary-card {
+  border: 1px solid #e6eaf1;
+  border-radius: 10px;
+  padding: 1.25rem;
+  background-color: #ffffff;
+}
+
+.summary-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.summary-card__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0;
+}
+
+.summary-card__edit {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #4f83e8;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.summary-card__edit:hover {
+  text-decoration: underline;
+}
+
+.summary-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.summary-card__row {
+  font-size: 0.8125rem;
+  color: #33415c;
+}
+
+.summary-card__row-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+
+.summary-card__doc-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: #33415c;
+}
+
+.summary-card__doc-view {
+  color: #4f83e8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.summary-card__doc-view:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,36 @@
+.document-status-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-left: 4px solid #e6eaf1;
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+}
+
+.document-status-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.document-status-card__label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #33415c;
+  margin: 0;
+}
+
+.document-status-card__value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0;
+}
+
+.document-status-card__meta {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin: 0;
+}

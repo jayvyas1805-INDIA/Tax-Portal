@@ -1,0 +1,45 @@
+.commission-trend-chart {
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.commission-trend-chart__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.commission-trend-chart__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0;
+}
+
+.commission-trend-chart__toggle {
+  display: flex;
+  gap: 0.25rem;
+  background-color: #f4f6fa;
+  border-radius: 8px;
+  padding: 0.2rem;
+}
+
+.commission-trend-chart__toggle-btn {
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #7a8699;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+}
+
+.commission-trend-chart__toggle-btn--active {
+  background-color: #12305c;
+  color: #ffffff;
+}

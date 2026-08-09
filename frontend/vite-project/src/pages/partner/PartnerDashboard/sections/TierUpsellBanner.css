@@ -1,0 +1,26 @@
+.tier-upsell-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background-color: #0c2140;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.tier-upsell-banner__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tier-upsell-banner__description {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #c7d4e6;
+  margin: 0 0 0.25rem 0;
+}
+
+.tier-upsell-banner .btn {
+  width: 100%;
+}

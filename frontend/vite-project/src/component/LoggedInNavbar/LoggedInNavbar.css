@@ -1,0 +1,78 @@
+.logged-in-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6eaf1;
+}
+
+.logged-in-navbar__logo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #12305c;
+}
+
+.logged-in-navbar__links {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.logged-in-navbar__link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #33415c;
+  text-decoration: none;
+}
+
+.logged-in-navbar__link:hover {
+  color: #12305c;
+}
+
+.logged-in-navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.logged-in-navbar__support {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #33415c;
+  text-decoration: none;
+}
+
+.logged-in-navbar__refer-btn {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #12305c;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.1rem;
+  cursor: pointer;
+}
+
+.logged-in-navbar__refer-btn:hover {
+  background-color: #0d2447;
+}
+
+.logged-in-navbar__icon-btn,
+.logged-in-navbar__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid #e6eaf1;
+  background-color: #f4f6fa;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .logged-in-navbar__links {
+    display: none;
+  }
+}

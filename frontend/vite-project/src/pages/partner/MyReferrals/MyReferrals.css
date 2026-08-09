@@ -1,0 +1,32 @@
+.my-referrals {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #f4f6fa;
+}
+
+.my-referrals__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.my-referrals__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.5rem 2rem 2.5rem 2rem;
+}
+
+@media (max-width: 900px) {
+  .my-referrals {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-referrals__main {
+    padding: 1.25rem;
+  }
+}

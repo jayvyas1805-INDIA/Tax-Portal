@@ -1,0 +1,111 @@
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.notifications-list__items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.notifications-list__item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+}
+
+.notifications-list__item--unread {
+  background-color: #f5f8ff;
+}
+
+.notifications-list__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
+
+.notifications-list__icon--positive {
+  background-color: #e6f6ec;
+}
+
+.notifications-list__icon--info {
+  background-color: #eef4ff;
+}
+
+.notifications-list__icon--warning {
+  background-color: #fdf1e0;
+}
+
+.notifications-list__icon--negative {
+  background-color: #fbe9e9;
+}
+
+.notifications-list__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notifications-list__title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0 0 0.25rem 0;
+}
+
+.notifications-list__description {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #5b6b85;
+  margin: 0 0 0.4rem 0;
+}
+
+.notifications-list__meta {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.notifications-list__unread-dot {
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #2f6fed;
+  margin-top: 0.5rem;
+}
+
+.notifications-list__load-more {
+  align-self: center;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #33415c;
+  background-color: #f8fafc;
+  border: 1.5px solid #e6eaf1;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+}
+
+.notifications-list__load-more:hover {
+  border-color: #12305c;
+}

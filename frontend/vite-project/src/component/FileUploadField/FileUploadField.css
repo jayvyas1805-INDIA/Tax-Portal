@@ -1,0 +1,58 @@
+.file-upload-field {
+  position: relative;
+  border: 1.5px dashed #c7d2e0;
+  border-radius: 10px;
+  background-color: #fafbfd;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.file-upload-field--active {
+  border-color: #12305c;
+  background-color: #eef4ff;
+}
+
+.file-upload-field__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+}
+
+.file-upload-field__icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.15rem;
+}
+
+.file-upload-field__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #b8792a;
+}
+
+.file-upload-field__hint {
+  font-size: 0.8125rem;
+  color: #7a8699;
+}
+
+.file-upload-field__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.file-upload-field--error {
+  border-color: #c53939;
+  background-color: #fbe9e9;
+}
+
+.file-upload-field__error {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #c53939;
+  margin: 0.4rem 0 0 0;
+}

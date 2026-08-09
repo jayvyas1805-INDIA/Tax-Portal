@@ -1,0 +1,129 @@
+.submit-documents-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.submit-documents-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0;
+}
+
+.submit-documents-card__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.submit-documents-card__section-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.submit-documents-card__row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.submit-documents-card__input {
+  flex: 1;
+  min-width: 160px;
+  font-family: inherit;
+  font-size: 0.875rem;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #d7dee8;
+  border-radius: 8px;
+  outline: none;
+}
+
+.submit-documents-card__input:focus {
+  border-color: #12305c;
+}
+
+.submit-documents-card__upload-btn,
+.submit-documents-card__replace-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #33415c;
+  background-color: #f8fafc;
+  border: 1.5px solid #d7dee8;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.submit-documents-card__upload-btn:hover,
+.submit-documents-card__replace-btn:hover {
+  border-color: #12305c;
+}
+
+.submit-documents-card__photo-zone {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: #f8fafc;
+  border: 1.5px dashed #c7d2e0;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.submit-documents-card__photo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #eef4ff;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.submit-documents-card__photo-info {
+  flex: 1;
+  min-width: 140px;
+}
+
+.submit-documents-card__photo-hint {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #33415c;
+  margin: 0;
+}
+
+.submit-documents-card__photo-subhint {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin: 0.15rem 0 0 0;
+}
+
+.submit-documents-card__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e6eaf1;
+}
+
+@media (max-width: 480px) {
+  .submit-documents-card__actions {
+    flex-direction: column-reverse;
+  }
+}

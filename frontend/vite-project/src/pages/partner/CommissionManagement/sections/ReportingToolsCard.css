@@ -1,0 +1,56 @@
+.reporting-tools-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.reporting-tools-card__title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #12305c;
+  margin: 0 0 0.25rem 0;
+}
+
+.reporting-tools-card__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  background-color: #f8fafc;
+  border: 1px solid #e6eaf1;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+.reporting-tools-card__item:hover {
+  border-color: #12305c;
+}
+
+.reporting-tools-card__item > span:first-child {
+  font-size: 1.15rem;
+}
+
+.reporting-tools-card__item-title {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #33415c;
+}
+
+.reporting-tools-card__item-subtitle {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.reporting-tools-card__item-icon {
+  margin-left: auto;
+  color: #7a8699;
+}

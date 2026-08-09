@@ -1,0 +1,191 @@
+.admin-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 256px;
+  min-width: 256px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: #0b1a3a;
+  color: #c7d0e6;
+  padding: 20px 14px;
+  box-sizing: border-box;
+}
+
+.admin-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px 22px;
+}
+
+.admin-sidebar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #2f5bd8;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.admin-sidebar__title {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.admin-sidebar__subtitle {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: #7c88ac;
+  text-transform: uppercase;
+}
+
+.admin-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.admin-sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #b7c1de;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.admin-sidebar__link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.admin-sidebar__link--active {
+  background: #1c3d8f;
+  color: #fff;
+}
+
+.admin-sidebar__icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.admin-sidebar__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.admin-sidebar__invite {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #3b6bf0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.admin-sidebar__invite:hover {
+  background: #2f57cc;
+}
+
+.admin-sidebar__invite-icon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+
+/* --- Mobile toggle button (hidden on desktop) --- */
+.admin-sidebar__toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  background: #0b1a3a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Close button inside drawer (hidden on desktop) --- */
+.admin-sidebar__close {
+  display: none;
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Backdrop overlay (mobile only) --- */
+.admin-sidebar__backdrop {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar__toggle {
+    display: flex;
+    background: transparent;
+    color: #0b1a3a;
+    font-size: 1.5rem;
+  }
+
+  .admin-sidebar__close {
+    display: block;
+  }
+
+  .admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1101;
+    width: 256px;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.25);
+  }
+
+  .admin-sidebar--open {
+    transform: translateX(0);
+  }
+
+  .admin-sidebar__backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+  }
+}
