@@ -21,7 +21,7 @@ export default function Header({ adminName = "Admin" }) {
       </div>
 
       <div className="admin-header__actions">
-        <button className="admin-header__icon-btn" type="button" aria-label="Notifications" onClick={() => navigate("/admin/notifications")}>
+        <button className="admin-header__icon-btn" type="button" aria-label="Notifications" onClick={() => navigate("/admin/notification-center")}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M6 10a6 6 0 1112 0c0 4 1.3 5.4 1.8 6H4.2c.5-.6 1.8-2 1.8-6z" />
             <path d="M10 19a2 2 0 004 0" />
