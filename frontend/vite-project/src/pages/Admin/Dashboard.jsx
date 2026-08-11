@@ -137,7 +137,7 @@ export default function Dashboard() {
       positive: stats.partnerGrowthPercent >= 0,
     },
     {
-      label: "ACTIVE PARTNERS",
+      label: "ACTIVE PARTNERS(24H)",
       value: `${stats.activePartnersPercent}%`,
       change: `${stats.activePartners.toLocaleString()} Active`,
       note: "Last active login within 24 hours",
