@@ -111,7 +111,7 @@ export default function PartnerDetailModal({ isOpen, onClose, partner, loading, 
       <div className="pdm__modal" onClick={(e) => e.stopPropagation()}>
         <div className="pdm__header">
           <div>
-            <h2>{loading ? "Loading..." : partner?.personalInfo?.fullName || partner?.name || "Partner Details"}</h2>
+            <h2 style={{ color: "#333" }}>{loading ? "Loading..." : partner?.personalInfo?.fullName || partner?.name || "Partner Details"}</h2>
             {!loading && partner && <p className="pdm__subtitle">{partner.email}</p>}
           </div>
           <button type="button" className="pdm__close" onClick={handleClose} aria-label="Close">
