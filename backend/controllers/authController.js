@@ -706,7 +706,7 @@ export const invitePartner = async (req, res) => {
       invitedBy: req.user?._id, // requires auth middleware to populate req.user
     });
 
-    const registrationLink = `${process.env.FRONTEND_DEV_URL}/partner-registration?token=${invite.token}`;
+    const registrationLink = `${process.env.FRONTEND_URL}/partner-registration?token=${invite.token}`;
 
     await sendEmail({
       to: invite.email,
