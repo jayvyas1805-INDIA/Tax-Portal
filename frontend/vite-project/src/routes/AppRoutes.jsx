@@ -42,6 +42,10 @@ const AppRoutes = () => {
 
       {/* Protected — partner-only routes */}
       <Route
+        path="/"
+        element={<Navigate to="/partner-registration" replace />}
+      />
+      <Route
         path="/partner-dashboard"
         element={
           <PrivateRoute allowedRoles={["partner"]}>
@@ -106,21 +110,21 @@ const AppRoutes = () => {
         }
       />
 
-        {/* Admin routes */}
-         <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<Navigate to="dashboard" replace />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="partner-management" element={<PartnerManagement />} />
-          <Route path="referral-management" element={<ReferralManagement />} />
-          <Route path="commission-management" element={<CommissionManagementA />} />
-          <Route path="business-management" element={<BusinessManagement />} />
-          <Route path="reports-analytics" element={<ReportsAnalytics />} />
-          <Route path="notification-center" element={<NotificationCenter />} />
-          <Route path="settings" element={<Settings />} />
-          <Route path="referral-management/convert/:referralId" element={<ConvertReferralLead />} />
-          <Route path="review-feedback" element={<ReviewFeedback />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
+      {/* Admin routes */}
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<Navigate to="dashboard" replace />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="partner-management" element={<PartnerManagement />} />
+        <Route path="referral-management" element={<ReferralManagement />} />
+        <Route path="commission-management" element={<CommissionManagementA />} />
+        <Route path="business-management" element={<BusinessManagement />} />
+        <Route path="reports-analytics" element={<ReportsAnalytics />} />
+        <Route path="notification-center" element={<NotificationCenter />} />
+        <Route path="settings" element={<Settings />} />
+        <Route path="referral-management/convert/:referralId" element={<ConvertReferralLead />} />
+        <Route path="review-feedback" element={<ReviewFeedback />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
 
     </Routes>
   );
