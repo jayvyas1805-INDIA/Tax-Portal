@@ -6,6 +6,7 @@ import {
   respondToReview,
   flagReview,
 } from "../../api/adminReviewApi";
+import "./responsive.css";
 
 const TABS = ["All", "Pending", "Flagged"];
 const TAB_LABEL = { All: "All Reviews", Pending: "Pending Response", Flagged: "Flagged" };

@@ -8,6 +8,7 @@ import {
   getReferralById,
 } from "../../api/adminReferralApi";
 import ReferralDetailsModal from "../../component/Admin/ReferralDetailsModal/ReferralDetailsModal";
+import "./responsive.css";
 
 const STATUS_CLASS = {
   "Under Review": "rm-pill--new",

@@ -9,7 +9,7 @@ import {
   updateSystemConfig,
 } from "../../api/adminSettingsApi";
 import { getTemplates, updateTemplate } from "../../api/adminSettingsApi";
-
+import "./responsive.css";
 
 const TABS = [
   { key: "commission-rules", label: "Commission Rules", icon: "📊" },

@@ -8,6 +8,7 @@ import {
   getTopPartnersByRevenue,
 } from "../../api/adminAnalyticsApi";
 import { downloadFile } from "../../utils/downloadFile";
+import "./responsive.css";
 
 const RANGE_OPTIONS = [
   { value: "7d", label: "Last 7 Days" },

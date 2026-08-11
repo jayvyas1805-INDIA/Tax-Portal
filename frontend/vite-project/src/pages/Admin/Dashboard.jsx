@@ -9,6 +9,7 @@ import {
   getReferralStream,
 } from "../../api/adminDashboardApi";
 import { getSystemConfig } from "../../api/adminSettingsApi";
+import "./responsive.css";
 
 const formatCompactCurrency = (value) => {
   const amount = Number(value) || 0;

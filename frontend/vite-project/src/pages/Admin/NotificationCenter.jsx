@@ -8,6 +8,7 @@ import {
   markAllAsRead,
   clearHistory,
 } from "../../api/adminNotificationApi";
+import "./responsive.css";
 
 const TABS = ["All Notifications", "Critical Alerts", "Partner Updates", "Financial"];
 

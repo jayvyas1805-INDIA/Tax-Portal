@@ -7,6 +7,7 @@ import {
   getPartnerById,
 } from "../../api/adminPartnerApi";
 import PartnerDetailModal from "../../component/Admin/PartnerDetailModal/PartnerDetailModal";
+import "./responsive.css";
 
 const TABS = ["All", "Pending", "Suspended"];
 

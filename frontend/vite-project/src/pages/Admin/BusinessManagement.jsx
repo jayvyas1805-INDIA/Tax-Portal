@@ -5,6 +5,7 @@ import {
   getBusinessRegister,
   getClientLifecycle,
 } from "../../api/adminBusinessApi";
+import "./responsive.css";
 
 const SERVICE_OPTIONS = [
   "Tax Consulting",

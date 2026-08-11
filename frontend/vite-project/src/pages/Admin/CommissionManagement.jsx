@@ -6,6 +6,7 @@ import {
   getPayoutVelocity,
   updateCommissionStatus,
 } from "../../api/adminCommissionApi";
+import "./responsive.css";
 
 const STATUS_CLASS = {
   Pending: "cm-pill--pending",

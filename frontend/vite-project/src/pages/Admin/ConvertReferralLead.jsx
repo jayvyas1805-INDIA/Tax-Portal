@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ConvertReferralLead.css";
+import "./responsive.css";
 
 export default function ConvertReferralLead() {
   const [businessValue, setBusinessValue] = useState(0);
