@@ -1,8 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const navigate = useNavigate();
-
 /**
  * TaxPartner Portal — landing page
  * Direct clone of the reference: soft lavender-white background,
@@ -113,6 +111,7 @@ export default function Landing() {
     { icon: "wallet", title: "Premium Commissions", desc: "Earn industry-leading payouts for every successful referral." },
     { icon: "shield", title: "Expert Support", desc: "Our team of certified CAs and tax experts handle the rest." },
   ];
+  const navigate = useNavigate();
 
   return (
     <div className="tp-root">
