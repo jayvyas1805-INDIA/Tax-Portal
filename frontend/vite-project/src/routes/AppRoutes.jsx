@@ -15,6 +15,7 @@ import ResetPassword from "../pages/partner/ResetPassword/ResetPassword";
 import VerifyEmail from "../pages/partner/VerifyEmail/VerifyEmail";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../pages/Not Found/NotFound";
+import Landing from "../pages/partner/landing/Landing";
 // Admin routes starts
 import AdminLayout from "../component/Admin/Adminbar/AdminLayout";
 import Dashboard from "../pages/Admin/Dashboard";
@@ -43,7 +44,7 @@ const AppRoutes = () => {
       {/* Protected — partner-only routes */}
       <Route
         path="/"
-        element={<Navigate to="/partner-registration" replace />}
+        element={<Landing />}
       />
       <Route
         path="/partner-dashboard"
