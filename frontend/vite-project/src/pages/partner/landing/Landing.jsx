@@ -363,7 +363,9 @@ export default function Landing() {
               revenue stream with real-time tracking and automated payouts.
             </p>
             <div className="cta-row">
-              <button className="btn-primary">Become a Partner</button>
+              <button className="btn-primary" onClick={() => navigate("/partner-registeration")}>
+                Become a Partner
+              </button>
               <button className="btn-secondary">
                 <span className="play">▶</span> Watch How It Works
               </button>
