@@ -349,7 +349,7 @@ export default function Landing() {
       <div className="tp-shell">
         <header className="tp-header">
           <div className="tp-logo">TaxPartner Portal</div>
-          <button className="tp-login" onClick={navigate("/partner-login")}>
+          <button className="tp-login" onClick={() => navigate("/partner-login")}>
             Login
           </button>
         </header>
