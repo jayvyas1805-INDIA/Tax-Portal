@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+const navigate = useNavigate();
+
 /**
  * TaxPartner Portal — landing page
  * Direct clone of the reference: soft lavender-white background,
@@ -104,7 +106,6 @@ function FeatureCard({ icon, title, desc }) {
     </div>
   );
 }
-const navigate = useNavigate();
 
 export default function Landing() {
   const features = [
