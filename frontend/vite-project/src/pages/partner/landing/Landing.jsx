@@ -1,4 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
 
 /**
  * TaxPartner Portal — landing page
@@ -346,7 +349,9 @@ export default function Landing() {
       <div className="tp-shell">
         <header className="tp-header">
           <div className="tp-logo">TaxPartner Portal</div>
-          <button className="tp-login">Login</button>
+          <button className="tp-login" onClick={navigate("/partner-login")}>
+            Login
+          </button>
         </header>
 
         <section className="tp-hero">
