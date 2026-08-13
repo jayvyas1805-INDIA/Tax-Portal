@@ -13,58 +13,76 @@ import { useLogout } from "../../../hooks/useLogout";
 import { getProfile, updateProfile, uploadProfilePhoto, getProfileCompletion } from "../../../api/profileApi";
 import "./ProfileManagement.css";
 
+import {
+  LayoutDashboard,
+  Users,
+  WalletCards,
+  Bell,
+  UserCircle,
+  FileCheck2,
+  Landmark,
+  Settings,
+  LogOut,
+} from "lucide-react";
+
 const NAV_ITEMS = [
   {
     id: "dashboard",
-    icon: "🏠",
+    icon: LayoutDashboard,
     label: "Dashboard",
     path: "/partner-dashboard",
   },
   {
     id: "referrals",
-    icon: "👥",
+    icon: Users,
     label: "My Referrals",
     path: "/my-referrals",
   },
   {
     id: "commission",
-    icon: "💰",
+    icon: WalletCards,
     label: "Commission Management",
     path: "/commission-management",
   },
   {
     id: "notifications",
-    icon: "🔔",
+    icon: Bell,
     label: "Notifications",
     path: "/notifications",
   },
   {
     id: "profile",
-    icon: "👤",
+    icon: UserCircle,
     label: "Profile Management",
     path: "/profile-management",
   },
   {
     id: "kyc",
-    icon: "📄",
+    icon: FileCheck2,
     label: "KYC Documents",
     path: "/kyc-documents",
   },
   {
     id: "banking",
-    icon: "🏦",
+    icon: Landmark,
     label: "Bank Details",
     path: "/bank-details",
   },
   {
     id: "settings",
-    icon: "⚙️",
+    icon: Settings,
     label: "Settings",
     path: "/account-settings",
   },
 ];
 
-const FOOTER_ITEMS = [{ id: "logout", icon: "🚪", label: "Logout" }];
+const FOOTER_ITEMS = [
+  {
+    id: "logout",
+    icon: LogOut,
+    label: "Logout",
+  },
+];
 
 const INITIAL_FORM_DATA = {
   fullName: "",
