@@ -39,6 +39,14 @@ app.use(
 app.use(express.json()); // ✅ REQUIRED
 app.use(express.urlencoded({ extended: true })); // optional but good
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Server is running",
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.use('/api/auth', authRoutes);
 app.use("/api/partner/profile", profileRoutes);
 app.use("/api/partner/settings", settingRoutes);  
