@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./PageTopbar.css";
+import { Bell, UserCircle } from "lucide-react";
 
 
 const PageTopbar = ({
@@ -30,8 +31,9 @@ const PageTopbar = ({
           className="page-topbar__icon-btn"
           aria-label="Notifications"
           onClick={() => navigate('/notifications')}
+          style={{ color: "black", background: "transparent", border: "1px solid #ccc", cursor: "pointer" }}
         >
-          🔔
+          <Bell size={20} />
         </button>
         <div className="page-topbar__profile">
           <div
@@ -45,7 +47,7 @@ const PageTopbar = ({
                 className="page-topbar__avatar-image"
               />
             ) : (
-              <span>👤</span>
+              <span><UserCircle size={40} /></span>
             )}
           </div>
           {partnerName && partnerName}
