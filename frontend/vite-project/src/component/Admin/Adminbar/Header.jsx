@@ -1,10 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLogout } from "../../../hooks/useLogout";
 import "./Header.css";
 
 export default function Header({ adminName = "Admin" }) {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const logout = useLogout();
+
+  const handleLogout = () => {
+    if (window.confirm("Are you sure you want to log out?")) {
+      logout();
+    }
+  };
+
   return (
     <header className="admin-header">
       <div className="admin-header__search">
@@ -46,6 +55,19 @@ export default function Header({ adminName = "Admin" }) {
             {/* <p className="admin-header__role">Admin</p> */}
           </div>
         </div>
+        <button
+          className="admin-header__icon-btn admin-header__logout-btn"
+          type="button"
+          aria-label="Logout"
+          title="Logout"
+          onClick={handleLogout}
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M15 4H7a2 2 0 00-2 2v12a2 2 0 002 2h8" />
+            <path d="M19 12H9" />
+            <path d="M15 8l4 4-4 4" />
+          </svg>
+        </button>
       </div>
     </header>
   );

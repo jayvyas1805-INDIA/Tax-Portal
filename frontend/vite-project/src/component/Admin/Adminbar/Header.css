@@ -70,6 +70,15 @@
   background: #f4f5f9;
 }
 
+.admin-header__logout-btn {
+  color: #d0342c;
+  border-color: #f3d2d0;
+}
+
+.admin-header__logout-btn:hover {
+  background: #fdecea;
+}
+
 .admin-header__profile {
   display: flex;
   align-items: center;

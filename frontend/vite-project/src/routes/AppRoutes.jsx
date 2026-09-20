@@ -112,7 +112,14 @@ const AppRoutes = () => {
       />
 
       {/* Admin routes */}
-      <Route path="/admin" element={<AdminLayout />}>
+      <Route
+        path="/admin"
+        element={
+          <PrivateRoute allowedRoles={["admin"]}>
+            <AdminLayout />
+          </PrivateRoute>
+        }
+      >
         <Route index element={<Navigate to="dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="partner-management" element={<PartnerManagement />} />
