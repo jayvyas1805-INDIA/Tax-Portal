@@ -14,6 +14,7 @@ import ForgotPassword from "../pages/partner/ForgotPassword/ForgotPassword";
 import ResetPassword from "../pages/partner/ResetPassword/ResetPassword";
 import VerifyEmail from "../pages/partner/VerifyEmail/VerifyEmail";
 import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 import NotFound from "../pages/Not Found/NotFound";
 import Landing from "../pages/partner/landing/Landing";
 // Admin routes starts
@@ -34,17 +35,17 @@ const AppRoutes = () => {
   return (
     <Routes>
       {/* Public routes */}
-      <Route path="/partner-registration" element={<PartnerRegistration />} />
-      <Route path="/partner-registration/success" element={<RegistrationSuccess />} />
-      <Route path="/partner-login" element={<PartnerLogin />} />
-      <Route path="/forgot-password" element={<ForgotPassword />} />
-      <Route path="/reset-password/:token" element={<ResetPassword />} />
-      <Route path="/verify-email/:token" element={<VerifyEmail />} />
+      <Route path="/partner-registration" element={<PublicRoute><PartnerRegistration /></PublicRoute>} />
+      <Route path="/partner-registration/success" element={<PublicRoute><RegistrationSuccess /></PublicRoute>} />
+      <Route path="/partner-login" element={<PublicRoute><PartnerLogin /></PublicRoute>} />
+      <Route path="/forgot-password" element={<PublicRoute><ForgotPassword /></PublicRoute>} />
+      <Route path="/reset-password/:token" element={<PublicRoute><ResetPassword /></PublicRoute>} />
+      <Route path="/verify-email/:token" element={<PublicRoute><VerifyEmail /></PublicRoute>} />
 
       {/* Protected — partner-only routes */}
       <Route
         path="/"
-        element={<Landing />}
+        element={<PublicRoute><Landing /></PublicRoute>}
       />
       <Route
         path="/partner-dashboard"

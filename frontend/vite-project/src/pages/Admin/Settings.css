@@ -10,7 +10,7 @@
   justify-content: center;
   min-height: 160px;
   font-size: 14px;
-  color: #7a839c;
+  color: var(--text-muted);
 }
 
 .st__state--error {
@@ -20,10 +20,10 @@
 .st__placeholder {
   padding: 24px;
   border-radius: 10px;
-  background: #f7f8fc;
+  background: var(--bg-subtle);
   border: 1px dashed #dfe3ee;
   font-size: 13px;
-  color: #7a839c;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -32,10 +32,10 @@
   width: 100%;
   padding: 6px 8px;
   border-radius: 6px;
-  border: 1px solid #e0e3ec;
+  border: 1px solid var(--border);
   font-size: 12.5px;
-  background: #f7f8fc;
-  color: #333a54;
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
 }
 
 .st__edit-actions {
@@ -47,8 +47,8 @@
   padding: 5px 10px;
   border-radius: 6px;
   border: none;
-  background: #3b6bf0;
-  color: #fff;
+  background: var(--accent);
+  color: var(--text-inverse);
   font-size: 11.5px;
   font-weight: 600;
   cursor: pointer;
@@ -57,9 +57,9 @@
 .st__cancel-btn {
   padding: 5px 10px;
   border-radius: 6px;
-  border: 1px solid #e0e3ec;
-  background: #fff;
-  color: #444c68;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
   font-size: 11.5px;
   cursor: pointer;
 }
@@ -68,7 +68,7 @@
   width: 90px;
   padding: 6px 8px;
   border-radius: 6px;
-  border: 1px solid #e0e3ec;
+  border: 1px solid var(--border);
   font-size: 12.5px;
 }
 
@@ -77,7 +77,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 0;
-  border-bottom: 1px solid #f0f2f8;
+  border-bottom: 1px solid var(--bg-subtle);
 }
 
 .st__field-row:last-child {
@@ -87,19 +87,19 @@
 .st__topbar h1 {
   margin: 0 0 4px;
   font-size: 21px;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .st__topbar p {
   margin: 0;
   font-size: 13px;
-  color: #7a839c;
+  color: var(--text-muted);
 }
 
 .st__tabs {
   display: flex;
   gap: 6px;
-  border-bottom: 1px solid #eceef4;
+  border-bottom: 1px solid var(--border);
 }
 
 .st__tab {
@@ -110,15 +110,15 @@
   border: none;
   background: none;
   font-size: 13px;
-  color: #99a1b8;
+  color: var(--text-muted);
   cursor: pointer;
   border-bottom: 2px solid transparent;
 }
 
 .st__tab--active {
-  color: #0b1a3a;
+  color: var(--text-heading);
   font-weight: 700;
-  border-color: #0b1a3a;
+  border-color: var(--text-heading);
 }
 
 .st__grid {
@@ -129,9 +129,10 @@
 }
 
 .st-card {
-  background: #fff;
-  border: 1px solid #eceef4;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
   padding: 18px 20px;
 }
 
@@ -145,7 +146,7 @@
 .st-card h3 {
   margin: 0 0 14px;
   font-size: 14.5px;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .st__rules .st-card__row h3 {
@@ -156,8 +157,8 @@
   padding: 8px 14px;
   border-radius: 8px;
   border: none;
-  background: #0b1a3a;
-  color: #fff;
+  background: #111a2e;
+  color: var(--text-inverse);
   font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
@@ -173,24 +174,24 @@
   text-align: left;
   font-size: 10.5px;
   letter-spacing: 0.03em;
-  color: #99a1b8;
+  color: var(--text-muted);
   padding: 8px 6px;
-  border-bottom: 1px solid #eceef4;
+  border-bottom: 1px solid var(--border);
 }
 
 .st__table td {
   padding: 14px 6px;
-  border-bottom: 1px solid #f3f4f9;
-  color: #333a54;
+  border-bottom: 1px solid var(--bg-subtle);
+  color: var(--text-secondary);
 }
 
 .st__tier {
   font-weight: 700;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .st__base {
-  color: #2f5bd8;
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -207,9 +208,9 @@
 .st__edit-btn {
   padding: 6px 12px;
   border-radius: 7px;
-  border: 1px solid #e0e3ec;
-  background: #fff;
-  color: #444c68;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
@@ -222,8 +223,8 @@
 }
 
 .st__forecast {
-  background: #0b1a3a;
-  color: #fff;
+  background: #111a2e;
+  color: var(--text-inverse);
   border: none;
 }
 
@@ -250,7 +251,7 @@
 
 .st__forecast-bar div {
   height: 100%;
-  background: #4f7cff;
+  background: var(--accent);
   border-radius: 4px;
 }
 
@@ -266,7 +267,7 @@
   justify-content: space-between;
   padding: 10px 0;
   font-size: 13px;
-  color: #333a54;
+  color: var(--text-secondary);
 }
 
 .st__switch {
@@ -274,7 +275,7 @@
   height: 22px;
   border-radius: 20px;
   border: none;
-  background: #e0e3ec;
+  background: var(--border);
   position: relative;
   cursor: pointer;
   padding: 0;
@@ -287,12 +288,12 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--bg-surface);
   transition: left 0.15s ease;
 }
 
 .st__switch.is-on {
-  background: #3b6bf0;
+  background: var(--accent);
 }
 
 .st__switch.is-on span {
@@ -300,9 +301,9 @@
 }
 
 input{
-  background: #f7f8fc;
-  border: 1px solid #e0e3ec;
-  color: #333a54;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
 }
 
 @media (max-width: 1100px) {

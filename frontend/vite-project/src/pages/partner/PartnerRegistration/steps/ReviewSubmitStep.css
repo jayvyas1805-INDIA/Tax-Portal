@@ -8,7 +8,7 @@
 .review-step__title {
   font-size: 1.0625rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0;
 }
 
@@ -23,7 +23,7 @@
   justify-content: space-between;
   gap: 0.9rem;
   padding-top: 0.75rem;
-  border-top: 1px solid #e6eaf1;
+  border-top: 1px solid var(--border);
 }
 
 @media (max-width: 640px) {

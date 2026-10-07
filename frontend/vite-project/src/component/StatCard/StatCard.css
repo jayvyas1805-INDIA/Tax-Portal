@@ -2,23 +2,24 @@
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  background-color: #ffffff;
-  border: 1px solid #e6eaf1;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
   padding: 1.1rem 1.25rem;
 }
 
 .stat-card__label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #7a8699;
+  color: var(--text-muted);
   margin: 0;
 }
 
 .stat-card__value {
   font-size: 1.375rem;
   font-weight: 800;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .stat-card__meta--neutral {
-  color: #7a8699;
+  color: var(--text-muted);
 }
 
 .stat-card__meta--warning {

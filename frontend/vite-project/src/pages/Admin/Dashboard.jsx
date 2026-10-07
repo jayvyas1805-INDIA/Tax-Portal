@@ -245,7 +245,7 @@ export default function Dashboard() {
         <div className="dash__system-config">
           <div>
             <span>Quarterly Goal </span>
-            <strong style={{ color: quarterlyGoal > 0 && goalProgress >= 100 ? "#3b6bf0" : "inherit" }}>
+            <strong style={{ color: quarterlyGoal > 0 && goalProgress >= 100 ? "#4f63d2" : "inherit" }}>
               {formatCompactCurrency(
                 systemConfig?.quarterlyRevenueGoal
               )}
@@ -254,7 +254,7 @@ export default function Dashboard() {
 
           <div>
             <span>Payout Day </span>
-            <strong style={{color: "#3b6bf0"}}>
+            <strong style={{color: "#4f63d2"}}>
               {systemConfig?.payoutScheduleDay
                 ? `${systemConfig.payoutScheduleDay}th`
                 : "—"}
@@ -290,7 +290,7 @@ export default function Dashboard() {
               <polyline
                 points={chartPoints}
                 fill="none"
-                stroke="#3b6bf0"
+                stroke="#4f63d2"
                 strokeWidth="2.5"
               />
             </svg>

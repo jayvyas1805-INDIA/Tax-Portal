@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLogout } from "../../../hooks/useLogout";
+import ThemeToggle from "../../ThemeToggle/ThemeToggle";
 import "./Header.css";
 
 export default function Header({ adminName = "Admin" }) {
@@ -30,6 +31,7 @@ export default function Header({ adminName = "Admin" }) {
       </div>
 
       <div className="admin-header__actions">
+        <ThemeToggle variant="light-surface" />
         <button className="admin-header__icon-btn" type="button" aria-label="Notifications" onClick={() => navigate("/admin/notification-center")}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M6 10a6 6 0 1112 0c0 4 1.3 5.4 1.8 6H4.2c.5-.6 1.8-2 1.8-6z" />

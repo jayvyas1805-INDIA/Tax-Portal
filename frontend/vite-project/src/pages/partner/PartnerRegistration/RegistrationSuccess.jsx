@@ -27,9 +27,9 @@ const RegistrationSuccess = () => {
             preserveAspectRatio="xMidYMax meet"
             aria-hidden="true"
           >
-            <rect x="20" y="150" width="360" height="60" rx="10" fill="#0c2140" />
-            <rect x="60" y="90" width="90" height="120" rx="8" fill="#1a3b6b" />
-            <rect x="250" y="90" width="90" height="120" rx="8" fill="#1a3b6b" />
+            <rect x="20" y="150" width="360" height="60" rx="10" fill="#111a2e" />
+            <rect x="60" y="90" width="90" height="120" rx="8" fill="#33409e" />
+            <rect x="250" y="90" width="90" height="120" rx="8" fill="#33409e" />
             <circle cx="200" cy="120" r="36" fill="#4f83e8" opacity="0.85" />
             <rect x="170" y="150" width="60" height="10" rx="5" fill="#eef4ff" />
           </svg>

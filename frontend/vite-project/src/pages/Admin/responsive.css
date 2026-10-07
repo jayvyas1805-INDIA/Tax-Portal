@@ -8,13 +8,13 @@
 ================================ */
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img,

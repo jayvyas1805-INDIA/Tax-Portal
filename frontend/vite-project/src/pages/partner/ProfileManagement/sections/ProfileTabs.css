@@ -1,7 +1,7 @@
 .profile-tabs {
   display: flex;
   gap: 1.75rem;
-  border-bottom: 1px solid #e6eaf1;
+  border-bottom: 1px solid var(--border);
   padding: 0 1.5rem;
 }
 
@@ -9,7 +9,7 @@
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #7a8699;
+  color: var(--text-muted);
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
@@ -18,10 +18,10 @@
 }
 
 .profile-tabs__tab:hover {
-  color: #12305c;
+  color: var(--text-heading);
 }
 
 .profile-tabs__tab--active {
-  color: #12305c;
-  border-bottom-color: #12305c;
+  color: var(--text-heading);
+  border-bottom-color: var(--text-heading);
 }

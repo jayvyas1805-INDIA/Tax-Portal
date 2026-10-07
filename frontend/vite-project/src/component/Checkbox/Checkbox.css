@@ -10,18 +10,18 @@
   width: 1.05rem;
   height: 1.05rem;
   flex-shrink: 0;
-  accent-color: #12305c;
+  accent-color: var(--text-heading);
   cursor: pointer;
 }
 
 .checkbox__label {
   font-size: 0.875rem;
   line-height: 1.5;
-  color: #33415c;
+  color: var(--text-secondary);
 }
 
 .checkbox__label a {
-  color: #12305c;
+  color: var(--text-heading);
   font-weight: 600;
   text-decoration: underline;
 }

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: var(--bg-surface);
   border: 1px solid #e8edf5;
   border-radius: 16px;
   padding: 18px 20px;
@@ -34,7 +34,7 @@
 
 .notification-tabs__tab--active {
   background: #6ea8ff;
-  color: #fff;
+  color: var(--text-inverse);
 }
 
 .notification-tabs__actions {
@@ -59,17 +59,17 @@
 }
 
 .notification-tabs__mark-read {
-  background: #fff;
+  background: var(--bg-surface);
   color: #1b5dbf;
   border: 1px solid #1b5dbf;
 }
 
 .notification-tabs__mark-read:hover {
-  background: #eef5ff;
+  background: var(--accent-soft);
 }
 
 .notification-tabs__delete {
-  background: #fff;
+  background: var(--bg-surface);
   color: #d32f2f;
   border: 1px solid #f3c4c4;
 }

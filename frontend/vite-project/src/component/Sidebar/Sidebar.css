@@ -1,6 +1,6 @@
 .sidebar {
   width: 260px;
-  background: #062b62;
+  background: #111a2e;
   color: white;
   display: flex;
   flex-direction: column;
@@ -31,6 +31,6 @@
   padding: 12px;
   border: none;
   background: white;
-  color: #062b62;
+  color: #111a2e;
   border-radius: 8px;
 }

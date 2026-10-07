@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./SidebarNav.css";
 import { useNavigate } from "react-router-dom";
 import { Menu, X, ShieldCheck } from "lucide-react";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const SidebarNav = ({
   brandTitle,
@@ -101,6 +102,11 @@ const SidebarNav = ({
             );
           })}
         </nav>
+
+        {/* Theme toggle */}
+        <div className="sidebar-nav__theme">
+          <ThemeToggle variant="dark-surface" />
+        </div>
 
         {/* Footer */}
         {footerItems && (

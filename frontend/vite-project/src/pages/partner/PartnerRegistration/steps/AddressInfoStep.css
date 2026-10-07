@@ -18,14 +18,14 @@
   width: 2.1rem;
   height: 2.1rem;
   border-radius: 8px;
-  background-color: #eef4ff;
+  background-color: var(--accent-soft);
   font-size: 1rem;
 }
 
 .address-info-step__header-title {
   font-size: 1rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0;
 }
 
@@ -46,7 +46,7 @@
   justify-content: space-between;
   gap: 0.9rem;
   padding-top: 0.5rem;
-  border-top: 1px solid #e6eaf1;
+  border-top: 1px solid var(--border);
 }
 
 @media (max-width: 640px) {

@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
-  background-color: #ffffff;
-  border: 1px solid #e6eaf1;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
   padding: 1.5rem;
 }
 
@@ -17,21 +18,21 @@
 .profile-completion-checklist__title {
   font-size: 0.9375rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0;
 }
 
 .profile-completion-checklist__percentage {
   font-size: 0.9375rem;
   font-weight: 800;
-  color: #12305c;
+  color: var(--text-heading);
 }
 
 .profile-completion-checklist__bar {
   width: 100%;
   height: 6px;
   border-radius: 999px;
-  background-color: #eef1f6;
+  background-color: var(--bg-subtle);
   overflow: hidden;
 }
 
@@ -71,12 +72,12 @@
 
 .profile-completion-checklist__status--done {
   background-color: #1c9a53;
-  color: #ffffff;
+  color: var(--text-inverse);
 }
 
 .profile-completion-checklist__status--pending {
-  background-color: #eef1f6;
-  color: #94a3b8;
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
 }
 
 .profile-completion-checklist__status--missing {
@@ -87,7 +88,7 @@
 .profile-completion-checklist__item-label {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #33415c;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -97,6 +98,6 @@
 
 .profile-completion-checklist__item-note {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin: 0.1rem 0 0 0;
 }

@@ -46,8 +46,8 @@ const CommissionEarningsChart = ({
           <AreaChart data={data} margin={{ top: 4, right: 4, left: -20, bottom: 0 }}>
             <defs>
               <linearGradient id="earningsGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#2f6fed" stopOpacity={0.35} />
-                <stop offset="100%" stopColor="#2f6fed" stopOpacity={0} />
+                <stop offset="0%" stopColor="#4f63d2" stopOpacity={0.35} />
+                <stop offset="100%" stopColor="#4f63d2" stopOpacity={0} />
               </linearGradient>
             </defs>
             <XAxis
@@ -68,7 +68,7 @@ const CommissionEarningsChart = ({
             <Area
               type="monotone"
               dataKey="earnings"
-              stroke="#2f6fed"
+              stroke="#4f63d2"
               strokeWidth={2}
               fill="url(#earningsGradient)"
             />

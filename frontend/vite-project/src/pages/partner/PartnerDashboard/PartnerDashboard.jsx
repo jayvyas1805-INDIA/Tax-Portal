@@ -330,8 +330,8 @@ const PartnerDashboard = () => {
   return (
     <div className="partner-dashboard">
       <SidebarNav
-        brandTitle="TaxPartner Pro"
-        brandSubtitle="Verified Consultant"
+        brandTitle="Udyog Mantra"
+        brandSubtitle="Partner Portal"
         items={NAV_ITEMS}
         footerItems={FOOTER_ITEMS}
         activeId={activeNavId}

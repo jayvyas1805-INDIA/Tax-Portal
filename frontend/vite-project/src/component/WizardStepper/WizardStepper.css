@@ -3,8 +3,8 @@
   flex-direction: column;
   gap: 1.1rem;
   padding: 1.5rem 1.75rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e6eaf1;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
 }
 
 .wizard-stepper__meta {
@@ -17,20 +17,20 @@
 .wizard-stepper__title {
   font-size: 1.0625rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0 0 0.15rem 0;
 }
 
 .wizard-stepper__subtitle {
   font-size: 0.8125rem;
-  color: #64748b;
+  color: var(--text-muted);
   margin: 0;
 }
 
 .wizard-stepper__percentage {
   font-size: 0.8125rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   white-space: nowrap;
 }
 
@@ -66,9 +66,9 @@
   border-radius: 50%;
   font-size: 0.875rem;
   font-weight: 700;
-  color: #94a3b8;
-  background-color: #eef1f6;
-  border: 2px solid #eef1f6;
+  color: var(--text-muted);
+  background-color: var(--bg-subtle);
+  border: 2px solid var(--bg-subtle);
 
   transition:
     background-color 0.35s ease,
@@ -78,15 +78,15 @@
 }
 
 .wizard-stepper__node--completed {
-  background-color: #12305c;
-  border-color: #12305c;
-  color: #fff;
+  background-color: var(--brand);
+  border-color: var(--text-heading);
+  color: var(--text-inverse);
 }
 
 .wizard-stepper__node--active {
-  background: #fff;
-  border-color: #12305c;
-  color: #12305c;
+  background: var(--bg-surface);
+  border-color: var(--text-heading);
+  color: var(--text-heading);
   transform: scale(1.08);
 }
 
@@ -95,7 +95,7 @@
   flex: 1;
   height: 2px;
   margin: 0 0.35rem;
-  background: #e6eaf1;
+  background: var(--border);
   overflow: hidden;
 }
 
@@ -103,7 +103,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: #12305c;
+  background: var(--brand);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease-in-out;
@@ -114,7 +114,7 @@
 }
 
 .wizard-stepper__connector--completed {
-  background-color: #12305c;
+  background-color: var(--brand);
 }
 
 .wizard-stepper__step-label {
@@ -122,14 +122,14 @@
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.03em;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-align: center;
 
   transition: color 0.35s ease;
 }
 
 .wizard-stepper__step-label--active {
-  color: #12305c;
+  color: var(--text-heading);
 }
 
 @media (max-width: 640px) {

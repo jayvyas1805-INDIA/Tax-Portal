@@ -1,14 +1,15 @@
 .conversion-funnel-chart {
-  background-color: #ffffff;
-  border: 1px solid #e6eaf1;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
   padding: 1.5rem;
 }
 
 .conversion-funnel-chart__title {
   font-size: 0.9375rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0 0 1.25rem 0;
 }
 
@@ -30,7 +31,7 @@
   justify-content: center;
   height: 2.5rem;
   border-radius: 8px;
-  color: #ffffff;
+  color: var(--text-inverse);
   font-size: 0.875rem;
   font-weight: 700;
   transition: width 0.3s ease;
@@ -42,5 +43,5 @@
   width: 80px;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #33415c;
+  color: var(--text-secondary);
 }

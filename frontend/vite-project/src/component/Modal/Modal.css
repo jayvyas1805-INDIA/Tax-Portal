@@ -10,7 +10,7 @@
 }
 
 .modal-card {
-  background-color: #ffffff;
+  background-color: var(--bg-surface);
   border-radius: 12px;
   width: 100%;
   max-width: 460px;
@@ -24,13 +24,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid #e6eaf1;
+  border-bottom: 1px solid var(--border);
 }
 
 .modal-card__title {
   font-size: 1rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0;
 }
 
@@ -42,14 +42,14 @@
   height: 1.75rem;
   border-radius: 50%;
   border: none;
-  background-color: #f4f6fa;
-  color: #7a8699;
+  background-color: var(--bg-page);
+  color: var(--text-muted);
   cursor: pointer;
   font-size: 0.875rem;
 }
 
 .modal-card__close:hover {
-  background-color: #e6eaf1;
+  background-color: var(--border);
 }
 
 .modal-card__body {

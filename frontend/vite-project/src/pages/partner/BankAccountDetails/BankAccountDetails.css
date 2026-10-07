@@ -3,7 +3,7 @@
   grid-template-columns: 250px 1fr;
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: #f4f6fa;
+  background-color: var(--bg-page);
 }
 
 .bank-account-details__content {
@@ -29,14 +29,14 @@
 
 .bank-account-details__breadcrumb {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin: 0 0 0.35rem 0;
 }
 
 .bank-account-details__title {
   font-size: 1.375rem;
   font-weight: 800;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0;
 }
 

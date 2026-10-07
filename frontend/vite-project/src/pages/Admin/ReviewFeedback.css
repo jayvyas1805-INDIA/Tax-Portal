@@ -10,7 +10,7 @@
   justify-content: center;
   min-height: 200px;
   font-size: 14px;
-  color: #7a839c;
+  color: var(--text-muted);
 }
 
 .rf__state--error {
@@ -28,7 +28,7 @@
   min-height: 56px;
   padding: 8px 10px;
   border-radius: 8px;
-  border: 1px solid #e0e3ec;
+  border: 1px solid var(--border);
   font-size: 12.5px;
   font-family: inherit;
   resize: vertical;
@@ -38,14 +38,14 @@
   margin: 8px 0 0;
   padding: 8px 10px;
   border-radius: 8px;
-  background: #f7f8fc;
-  border-left: 3px solid #3b6bf0;
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--accent);
   font-size: 12.5px;
-  color: #444c68;
+  color: var(--text-secondary);
 }
 
 .rf__admin-response strong {
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .rf__pagination {
@@ -59,17 +59,17 @@
   min-width: 30px;
   padding: 6px 8px;
   border-radius: 6px;
-  border: 1px solid #e0e3ec;
-  background: #fff;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
   font-size: 12.5px;
-  color: #444c68;
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
 .rf__pagination button.is-active {
-  background: #3b6bf0;
-  border-color: #3b6bf0;
-  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-inverse);
 }
 
 .rf__pagination button:disabled {
@@ -88,13 +88,13 @@
 .rf__topbar h1 {
   margin: 0 0 4px;
   font-size: 21px;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .rf__topbar p {
   margin: 0;
   font-size: 13px;
-  color: #7a839c;
+  color: var(--text-muted);
   max-width: 480px;
 }
 
@@ -107,9 +107,9 @@
 }
 
 .rf__btn--ghost {
-  background: #fff;
-  border: 1px solid #e0e3ec;
-  color: #444c68;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
 }
 
 .rf__stats {
@@ -119,9 +119,10 @@
 }
 
 .rf-card {
-  background: #fff;
-  border: 1px solid #eceef4;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
   padding: 18px 20px;
 }
 
@@ -130,18 +131,18 @@
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.03em;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .rf-card__value {
   margin: 10px 0 4px;
   font-size: 22px;
   font-weight: 700;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .rf-card__value.is-accent {
-  color: #2f5bd8;
+  color: var(--accent);
 }
 
 .rf-card__value.is-warn {
@@ -151,7 +152,7 @@
 .rf-card__note {
   margin: 0;
   font-size: 11.5px;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .rf-card__note.is-up {
@@ -168,7 +169,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px;
-  border-bottom: 1px solid #eceef4;
+  border-bottom: 1px solid var(--border);
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -182,20 +183,20 @@
   padding: 7px 14px;
   border-radius: 7px;
   border: none;
-  background: #f4f5f9;
+  background: var(--bg-subtle);
   font-size: 12.5px;
-  color: #6a7290;
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
 .rf__tab--active {
-  background: #0b1a3a;
-  color: #fff;
+  background: #111a2e;
+  color: var(--text-inverse);
 }
 
 .rf__count {
   font-size: 12px;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .rf__list {
@@ -208,7 +209,7 @@
   display: flex;
   gap: 14px;
   padding: 18px 20px;
-  border-bottom: 1px solid #f3f4f9;
+  border-bottom: 1px solid var(--bg-subtle);
 }
 
 .rf__item:last-child {
@@ -222,8 +223,8 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #eaf0ff;
-  color: #2f5bd8;
+  background: var(--accent-soft);
+  color: var(--accent);
   font-size: 12px;
   font-weight: 700;
   flex-shrink: 0;
@@ -246,13 +247,13 @@
   margin: 0;
   font-size: 13.5px;
   font-weight: 700;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .rf__item-partner {
   margin: 2px 0 0;
   font-size: 11.5px;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .rf__item-meta {
@@ -263,7 +264,7 @@
 
 .rf__stars {
   font-size: 13px;
-  color: #e0e3ec;
+  color: var(--border);
   letter-spacing: 1px;
 }
 
@@ -274,7 +275,7 @@
 .rf__item-comment {
   margin: 10px 0 0;
   font-size: 12.5px;
-  color: #444c68;
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 
@@ -287,7 +288,7 @@
 
 .rf__item-time {
   font-size: 11px;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .rf__item-actions {
@@ -304,15 +305,15 @@
 }
 
 .rf__action-btn--primary {
-  background: #0b1a3a;
+  background: #111a2e;
   border: none;
-  color: #fff;
+  color: var(--text-inverse);
 }
 
 .rf__action-btn--ghost {
-  background: #fff;
-  border: 1px solid #e0e3ec;
-  color: #444c68;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
 }
 
 .rf-pill {

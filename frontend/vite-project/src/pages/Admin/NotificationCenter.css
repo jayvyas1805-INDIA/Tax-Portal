@@ -10,7 +10,7 @@
   justify-content: center;
   min-height: 200px;
   font-size: 14px;
-  color: #7a839c;
+  color: var(--text-muted);
 }
 
 .nc__state--error {
@@ -28,17 +28,17 @@
   min-width: 30px;
   padding: 6px 8px;
   border-radius: 6px;
-  border: 1px solid #e0e3ec;
-  background: #fff;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
   font-size: 12.5px;
-  color: #444c68;
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
 .nc__pagination button.is-active {
-  background: #3b6bf0;
-  border-color: #3b6bf0;
-  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-inverse);
 }
 
 .nc__pagination button:disabled {
@@ -57,13 +57,13 @@
 .nc__topbar h1 {
   margin: 0 0 4px;
   font-size: 21px;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .nc__topbar p {
   margin: 0;
   font-size: 13px;
-  color: #7a839c;
+  color: var(--text-muted);
 }
 
 .nc__topbar-actions {
@@ -80,15 +80,15 @@
 }
 
 .nc__btn--ghost {
-  background: #fff;
-  border: 1px solid #e0e3ec;
-  color: #444c68;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
 }
 
 .nc__btn--primary {
-  background: #0b1a3a;
+  background: #111a2e;
   border: none;
-  color: #fff;
+  color: var(--text-inverse);
 }
 
 .nc__stats {
@@ -101,9 +101,10 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #fff;
-  border: 1px solid #eceef4;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
   padding: 16px 18px;
 }
 
@@ -114,7 +115,7 @@
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: #f4f5f9;
+  background: var(--bg-subtle);
   font-size: 16px;
 }
 
@@ -122,19 +123,20 @@
   margin: 0;
   font-size: 19px;
   font-weight: 700;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .nc-card__label {
   margin: 2px 0 0;
   font-size: 11.5px;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .nc__panel {
-  background: #fff;
-  border: 1px solid #eceef4;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
   padding: 0;
   overflow: hidden;
 }
@@ -144,7 +146,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px;
-  border-bottom: 1px solid #eceef4;
+  border-bottom: 1px solid var(--border);
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -159,24 +161,24 @@
   background: none;
   padding: 4px 0;
   font-size: 12.5px;
-  color: #99a1b8;
+  color: var(--text-muted);
   cursor: pointer;
   border-bottom: 2px solid transparent;
 }
 
 .nc__tab--active {
-  color: #0b1a3a;
+  color: var(--text-heading);
   font-weight: 700;
-  border-color: #0b1a3a;
+  border-color: var(--text-heading);
 }
 
 .nc__sort {
   font-size: 12px;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .nc__sort strong {
-  color: #444c68;
+  color: var(--text-secondary);
 }
 
 .nc__list {
@@ -189,7 +191,7 @@
   display: flex;
   gap: 14px;
   padding: 18px 20px;
-  border-bottom: 1px solid #f3f4f9;
+  border-bottom: 1px solid var(--bg-subtle);
 }
 
 .nc__item--unread {
@@ -203,7 +205,7 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #eaf0ff;
+  background: var(--accent-soft);
   font-size: 15px;
   flex-shrink: 0;
 }
@@ -228,19 +230,19 @@
   margin: 0;
   font-size: 13.5px;
   font-weight: 700;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .nc__item-time {
   font-size: 11px;
-  color: #99a1b8;
+  color: var(--text-muted);
   white-space: nowrap;
 }
 
 .nc__item-detail {
   margin: 6px 0 0;
   font-size: 12.5px;
-  color: #6a7290;
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 
@@ -259,15 +261,15 @@
 }
 
 .nc__action-btn--primary {
-  background: #0b1a3a;
+  background: #111a2e;
   border: none;
-  color: #fff;
+  color: var(--text-inverse);
 }
 
 .nc__action-btn--ghost {
-  background: #fff;
-  border: 1px solid #e0e3ec;
-  color: #444c68;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
 }
 
 @media (max-width: 1100px) {

@@ -6,7 +6,7 @@
   height: 100vh;
   position: sticky;
   top: 0;
-  background: #0b1a3a;
+  background: #111a2e;
   color: #c7d0e6;
   padding: 20px 14px;
   box-sizing: border-box;
@@ -26,15 +26,15 @@
   width: 34px;
   height: 34px;
   border-radius: 8px;
-  background: #2f5bd8;
-  color: #fff;
+  background: var(--accent);
+  color: var(--text-inverse);
   font-weight: 700;
   font-size: 13px;
 }
 
 .admin-sidebar__title {
   margin: 0;
-  color: #fff;
+  color: var(--text-inverse);
   font-size: 15px;
   font-weight: 700;
   line-height: 1.2;
@@ -71,12 +71,12 @@
 
 .admin-sidebar__link:hover {
   background: rgba(255, 255, 255, 0.06);
-  color: #fff;
+  color: var(--text-inverse);
 }
 
 .admin-sidebar__link--active {
-  background: #1c3d8f;
-  color: #fff;
+  background: #33409e;
+  color: var(--text-inverse);
 }
 
 .admin-sidebar__icon {
@@ -100,8 +100,8 @@
   padding: 11px 14px;
   border: none;
   border-radius: 8px;
-  background: #3b6bf0;
-  color: #fff;
+  background: var(--accent);
+  color: var(--text-inverse);
   font-weight: 600;
   font-size: 13.5px;
   cursor: pointer;
@@ -125,8 +125,8 @@
   top: 1rem;
   left: 1rem;
   z-index: 1100;
-  background: #0b1a3a;
-  color: #fff;
+  background: #111a2e;
+  color: var(--text-inverse);
   border: none;
   border-radius: 8px;
   width: 40px;
@@ -143,7 +143,7 @@
   align-self: flex-end;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--text-inverse);
   font-size: 1.1rem;
   cursor: pointer;
   margin-bottom: 0.5rem;
@@ -158,7 +158,7 @@
   .admin-sidebar__toggle {
     display: flex;
     background: transparent;
-    color: #0b1a3a;
+    color: #111a2e;
     font-size: 1.5rem;
   }
 

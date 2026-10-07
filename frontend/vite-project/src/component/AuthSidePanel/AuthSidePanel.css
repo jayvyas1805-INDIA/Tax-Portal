@@ -5,10 +5,10 @@
   justify-content: space-between;
   min-height: 100%;
   padding: 2rem 2.5rem;
-  color: #ffffff;
+  color: var(--text-inverse);
   background:
     linear-gradient(180deg, rgba(6, 18, 36, 0.55) 0%, rgba(6, 18, 36, 0.92) 75%),
-    linear-gradient(135deg, #0c2140 0%, #16345f 100%);
+    linear-gradient(135deg, #111a2e 0%, #16345f 100%);
   background-size: cover;
 }
 
@@ -30,6 +30,7 @@
   font-weight: 800;
   line-height: 1.25;
   margin: 0;
+  color: var(--text-inverse);
 }
 
 .auth-side-panel__description {
@@ -81,7 +82,7 @@
 }
 
 .auth-side-panel__footer-links a:hover {
-  color: #ffffff;
+  color: var(--text-inverse);
 }
 
 @media (max-width: 900px) {

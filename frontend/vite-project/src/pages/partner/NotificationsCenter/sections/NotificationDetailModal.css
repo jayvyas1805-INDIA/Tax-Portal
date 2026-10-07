@@ -9,7 +9,7 @@
 }
 
 .notification-detail-modal {
-  background: #fff;
+  background: var(--bg-surface);
   border-radius: 12px;
   padding: 24px;
   max-width: 420px;
@@ -26,7 +26,7 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
-  color: #6b7280;
+  color: var(--text-muted);
 }
 
 .notification-detail-modal__icon {
@@ -43,12 +43,12 @@
 
 .notification-detail-modal__meta {
   font-size: 12px;
-  color: #6b7280;
+  color: var(--text-muted);
   margin-bottom: 12px;
 }
 
 .notification-detail-modal__description {
   font-size: 14px;
   line-height: 1.5;
-  color: #374151;
+  color: var(--text-secondary);
 }

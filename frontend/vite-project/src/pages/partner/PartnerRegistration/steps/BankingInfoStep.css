@@ -8,13 +8,13 @@
 .banking-step__header-title {
   font-size: 1.0625rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0 0 0.35rem 0;
 }
 
 .banking-step__header-subtitle {
   font-size: 0.875rem;
-  color: #64748b;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -33,9 +33,9 @@
 
 .banking-step__note {
   font-size: 0.8125rem;
-  color: #33415c;
-  background-color: #eef4ff;
-  border: 1px solid #d9e6fb;
+  color: var(--text-secondary);
+  background-color: var(--accent-soft);
+  border: 1px solid var(--accent-soft);
   border-radius: 8px;
   padding: 0.9rem 1rem;
   margin: 0;
@@ -46,7 +46,7 @@
   justify-content: space-between;
   gap: 0.9rem;
   padding-top: 0.5rem;
-  border-top: 1px solid #e6eaf1;
+  border-top: 1px solid var(--border);
 }
 
 @media (max-width: 640px) {

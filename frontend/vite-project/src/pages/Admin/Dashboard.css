@@ -15,13 +15,13 @@
 .dash__topbar h1 {
   margin: 0 0 4px;
   font-size: 21px;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .dash__topbar p {
   margin: 0;
   font-size: 13px;
-  color: #7a839c;
+  color: var(--text-muted);
   max-width: 480px;
 }
 
@@ -33,10 +33,10 @@
 .dash__range-btn {
   padding: 9px 14px;
   border-radius: 8px;
-  border: 1px solid #e0e3ec;
-  background: #fff;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
   font-size: 13px;
-  color: #444c68;
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
@@ -44,8 +44,8 @@
   padding: 9px 16px;
   border-radius: 8px;
   border: none;
-  background: #0b1a3a;
-  color: #fff;
+  background: #111a2e;
+  color: var(--text-inverse);
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -58,9 +58,10 @@
 }
 
 .dash-card {
-  background: #fff;
-  border: 1px solid #eceef4;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
   padding: 18px 20px;
 }
 
@@ -74,13 +75,13 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .dash-card__change {
   font-size: 12px;
   font-weight: 600;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .dash-card__change.is-up {
@@ -91,20 +92,21 @@
   margin: 10px 0 2px;
   font-size: 26px;
   font-weight: 700;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .dash-card__note {
   margin: 0;
   font-size: 12px;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .dash__revenue {
   display: flex;
-  background: #0b1a3a;
+  background: #111a2e;
   border-radius: 14px;
-  color: #fff;
+  box-shadow: 0 4px 12px rgba(17, 26, 46, 0.18), 0 1px 2px rgba(17, 26, 46, 0.1);
+  color: var(--text-inverse);
   overflow: hidden;
 }
 
@@ -152,7 +154,7 @@
 
 .dash__revenue-progress-bar {
   height: 100%;
-  background: #4f7cff;
+  background: var(--accent);
   border-radius: 4px;
 }
 
@@ -213,7 +215,7 @@
 
 .dash__revenue-mini-bar div {
   height: 100%;
-  background: #4f7cff;
+  background: var(--accent);
 }
 
 .dash__grid-2 {
@@ -226,14 +228,14 @@
 .dash-card h3 {
   margin: 0;
   font-size: 14.5px;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .dash__legend {
   display: flex;
   gap: 14px;
   font-size: 12px;
-  color: #7a839c;
+  color: var(--text-muted);
 }
 
 .dash__legend span {
@@ -250,7 +252,7 @@
 }
 
 .dot--actual {
-  background: #3b6bf0;
+  background: var(--accent);
 }
 
 .dot--projected {
@@ -278,7 +280,7 @@
   position: relative;
   height: 32px;
   border-radius: 6px;
-  background: #f0f2f8;
+  background: var(--bg-subtle);
   display: flex;
   align-items: center;
   z-index: 0;
@@ -290,7 +292,7 @@
   top: 0;
   height: 100%;
   border-radius: 6px;
-  background: #3b6bf0;
+  background: var(--accent);
   opacity: 0.85;
  
 }
@@ -300,20 +302,20 @@
   padding-left: 12px;
   font-size: 12px;
   font-weight: 600;
-  color: #1c2338;
+  color: var(--text-heading);
   z-index: 1;
 }
 
 .dash__funnel-footer {
   margin: 12px 0 0;
   font-size: 12px;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .dash__link-btn {
   border: none;
   background: none;
-  color: #3b6bf0;
+  color: var(--accent);
   font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
@@ -341,8 +343,8 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #eaf0ff;
-  color: #2f5bd8;
+  background: var(--accent-soft);
+  color: var(--accent);
   font-size: 11px;
   font-weight: 700;
 }
@@ -350,14 +352,14 @@
 .dash__performer-name {
   flex: 1;
   font-size: 13px;
-  color: #1c2338;
+  color: var(--text-heading);
   font-weight: 500;
 }
 
 .dash__performer-value {
   font-size: 13px;
   font-weight: 700;
-  color: #1c2338;
+  color: var(--text-heading);
 }
 
 .dash__performer-change {
@@ -383,21 +385,21 @@
   text-align: left;
   font-size: 10.5px;
   letter-spacing: 0.03em;
-  color: #99a1b8;
+  color: var(--text-muted);
   padding: 6px 8px;
-  border-bottom: 1px solid #eceef4;
+  border-bottom: 1px solid var(--border);
 }
 
 .dash__stream-table td {
   padding: 10px 8px;
-  border-bottom: 1px solid #f3f4f9;
-  color: #333a54;
+  border-bottom: 1px solid var(--bg-subtle);
+  color: var(--text-secondary);
 }
 
 .dash__stream-footer {
   margin: 10px 0 0;
   font-size: 11.5px;
-  color: #99a1b8;
+  color: var(--text-muted);
 }
 
 .status-pill {
@@ -409,8 +411,8 @@
 }
 
 .status-pill--in-review {
-  background: #eaf0ff;
-  color: #2f5bd8;
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 .status-pill--contacted {
@@ -424,8 +426,8 @@
 }
 
 .status-pill--under-review {
-  background: #eaf0ff;
-  color: #2f5bd8;
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 .status-pill--proposal-shared {
@@ -444,7 +446,7 @@
   justify-content: center;
   min-height: 240px;
   font-size: 14px;
-  color: #7a839c;
+  color: var(--text-muted);
 }
 
 .dash__state--error {

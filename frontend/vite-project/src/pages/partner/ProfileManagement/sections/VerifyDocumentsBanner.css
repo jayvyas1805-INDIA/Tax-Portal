@@ -4,8 +4,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-  background-color: #0c2140;
-  color: #ffffff;
+  background-color: #111a2e;
+  color: var(--text-inverse);
   border-radius: 12px;
   padding: 1.5rem;
 }
@@ -23,7 +23,7 @@
 }
 
 .verify-documents-banner .btn--secondary {
-  background-color: #ffffff;
-  border-color: #ffffff;
+  background-color: var(--bg-surface);
+  border-color: var(--text-inverse);
   white-space: nowrap;
 }

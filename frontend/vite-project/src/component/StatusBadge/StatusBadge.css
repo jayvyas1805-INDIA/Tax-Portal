@@ -24,11 +24,11 @@
 }
 
 .status-badge--info {
-  background-color: #eef4ff;
-  color: #2f6fed;
+  background-color: var(--accent-soft);
+  color: var(--accent);
 }
 
 .status-badge--neutral {
-  background-color: #eef1f6;
-  color: #7a8699;
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
 }

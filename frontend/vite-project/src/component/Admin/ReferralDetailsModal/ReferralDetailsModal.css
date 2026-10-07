@@ -27,7 +27,7 @@
   max-height: 90vh;
   overflow-y: auto;
 
-  background: #ffffff;
+  background: var(--bg-surface);
   border-radius: 14px;
 
   box-shadow:
@@ -47,7 +47,7 @@
 
   padding:20px 25px;
 
-  border-bottom:1px solid #e5e7eb;
+  border-bottom:1px solid var(--border);
 }
 
 .referral-modal-header h2{
@@ -74,7 +74,7 @@
 }
 
 .close-btn:hover{
-  background:#e5e7eb;
+  background:var(--border);
 }
 
 /* ===========================
@@ -101,7 +101,7 @@
 
 .detail-row span{
   font-weight:600;
-  color:#6b7280;
+  color:var(--text-muted);
 }
 
 .detail-row strong{
@@ -124,13 +124,13 @@
 
   background:#f9fafb;
 
-  border:1px solid #e5e7eb;
+  border:1px solid var(--border);
 
   border-radius:8px;
 
   line-height:1.6;
 
-  color:#374151;
+  color:var(--text-secondary);
 }
 
 /* ===========================
@@ -156,7 +156,7 @@
 }
 
 .detail-row select:focus{
-  border-color:#2563eb;
+  border-color:var(--accent);
 }
 
 /* ===========================
@@ -173,7 +173,7 @@
 
   padding:20px 25px;
 
-  border-top:1px solid #e5e7eb;
+  border-top:1px solid var(--border);
 }
 
 .cancel-btn,
@@ -198,19 +198,19 @@
 
   background:#f3f4f6;
 
-  color:#374151;
+  color:var(--text-secondary);
 }
 
 .cancel-btn:hover{
 
-  background:#e5e7eb;
+  background:var(--border);
 }
 
 .save-btn{
 
-  background:#2563eb;
+  background:var(--accent);
 
-  color:#fff;
+  color:var(--text-inverse);
 }
 
 .save-btn:hover{
@@ -310,7 +310,7 @@
     
     background:#3145ae;
     
-    color:#fff;
+    color:var(--text-inverse);
     
     font-size:14px;
     

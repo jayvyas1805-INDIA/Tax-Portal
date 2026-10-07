@@ -1,7 +1,8 @@
 .profile-completion-checklist{
-    background:#fff;
-    border:1px solid #e7ebf2;
+    background:var(--bg-surface);
+    border:1px solid var(--border);
     border-radius:14px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
     padding:20px;
 }
 
@@ -13,18 +14,18 @@
 
 .profile-completion-checklist__header h3{
     margin:0;
-    color:#183153;
+    color:var(--text-heading);
 }
 
 .profile-completion-checklist__header span{
-    color:#64748b;
+    color:var(--text-muted);
     font-size:13px;
 }
 
 .profile-completion-checklist__header button{
     border:none;
     background:none;
-    color:#2563eb;
+    color:var(--accent);
     cursor:pointer;
     font-weight:600;
 }
@@ -38,7 +39,7 @@
 
 .profile-completion-checklist__fill{
     height:100%;
-    background:#16a34a;
+    background:#1c9a53;
     border-radius:50px;
 }
 
@@ -57,32 +58,37 @@
 }
 
 .status{
-    width:28px;
-    height:28px;
+    width:24px;
+    height:24px;
     border-radius:50%;
     display:grid;
     place-items:center;
-    font-size:14px;
+    font-size:12px;
     font-weight:700;
+    border:1.5px solid transparent;
+    flex-shrink:0;
 }
 
 .status.done{
-    background:#22c55e;
-    color:#fff;
+    background:#e6f6ec;
+    color:#1c9a53;
+    border-color:#c3ead2;
 }
 
 .status.progress{
-    background:#facc15;
-    color:#fff;
+    background:#fdf1e0;
+    color:#b8792a;
+    border-color:#f3dfb3;
 }
 
 .status.pending{
-    background:#e2e8f0;
-    color:#64748b;
+    background:var(--bg-subtle);
+    color:var(--text-muted);
+    border-color:var(--border);
 }
 
 .remaining{
     margin-top:20px;
     font-size:14px;
-    color:#64748b;
+    color:var(--text-muted);
 }

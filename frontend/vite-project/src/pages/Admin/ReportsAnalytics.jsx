@@ -194,7 +194,7 @@ export default function ReportsAnalytics() {
           </div>
           <div className="ra__chart">
             <svg viewBox="0 0 400 130" preserveAspectRatio="none">
-              <polyline points={toPoints(trend.current)} fill="none" stroke="#3b6bf0" strokeWidth="2.5" />
+              <polyline points={toPoints(trend.current)} fill="none" stroke="#4f63d2" strokeWidth="2.5" />
               <polyline
                 points={toPoints(trend.previous)}
                 fill="none"

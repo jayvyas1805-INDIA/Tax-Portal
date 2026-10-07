@@ -24,8 +24,8 @@
 }
 
 .btn--primary {
-  background-color: #12305c;
-  color: #ffffff;
+  background-color: var(--brand);
+  color: var(--text-inverse);
 }
 
 .btn--primary:hover:not(:disabled) {
@@ -33,12 +33,12 @@
 }
 
 .btn--secondary {
-  background-color: #ffffff;
-  color: #12305c;
+  background-color: var(--bg-surface);
+  color: var(--text-heading);
   border-color: #c7d2e0;
 }
 
 .btn--secondary:hover:not(:disabled) {
   background-color: #f3f6fa;
-  border-color: #12305c;
+  border-color: var(--text-heading);
 }

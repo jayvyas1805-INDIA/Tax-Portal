@@ -8,7 +8,7 @@
 .toggle-switch__label {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #33415c;
+  color: var(--text-secondary);
 }
 
 .toggle-switch__control {
@@ -31,7 +31,7 @@
 .toggle-switch__track {
   position: absolute;
   inset: 0;
-  background-color: #d7dee8;
+  background-color: var(--border);
   border-radius: 999px;
   transition: background-color 0.15s ease;
 }
@@ -43,13 +43,13 @@
   left: 0.15rem;
   width: 1.2rem;
   height: 1.2rem;
-  background-color: #ffffff;
+  background-color: var(--bg-surface);
   border-radius: 50%;
   transition: transform 0.15s ease;
 }
 
 .toggle-switch__input:checked + .toggle-switch__track {
-  background-color: #12305c;
+  background-color: var(--brand);
 }
 
 .toggle-switch__input:checked + .toggle-switch__track::before {

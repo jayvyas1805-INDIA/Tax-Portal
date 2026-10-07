@@ -31,7 +31,6 @@ const PageTopbar = ({
           className="page-topbar__icon-btn"
           aria-label="Notifications"
           onClick={() => navigate('/notifications')}
-          style={{ color: "black", background: "transparent", border: "1px solid #ccc", cursor: "pointer" }}
         >
           <Bell size={20} />
         </button>

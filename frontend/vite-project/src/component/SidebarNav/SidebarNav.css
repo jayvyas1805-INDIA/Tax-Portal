@@ -1,11 +1,13 @@
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 100vh;
-  background-color: #0c2140;
-  color: #ffffff;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: #111a2e;
+  color: var(--text-inverse);
   padding: 1.5rem 1rem;
+  overflow: hidden;
 }
 
 .sidebar-nav__brand {
@@ -34,6 +36,8 @@
   flex-direction: column;
   gap: 0.25rem;
   flex: 1;
+  overflow-y: auto;
+  min-height: 0;
 }
 
 .sidebar-nav__item {
@@ -56,20 +60,26 @@
 
 .sidebar-nav__item:hover {
   background-color: rgba(255, 255, 255, 0.06);
-  color: #ffffff;
+  color: var(--text-inverse);
 }
 
 .sidebar-nav__item--active {
-  background-color: #1a3b6b;
-  color: #ffffff;
+  background-color: #33409e;
+  color: var(--text-inverse);
   font-weight: 700;
 }
 
 .sidebar-nav__footer {
   border-top: 1px solid rgba(184, 181, 181, 0.1);
   padding-top: 0.75rem;
-  position: sticky;
-  bottom: 0;
+  flex-shrink: 0;
+}
+
+.sidebar-nav__theme {
+  flex-shrink: 0;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* --- Mobile toggle button (hidden on desktop) --- */
@@ -97,7 +107,7 @@
   align-self: flex-end;
   background: none;
   border: none;
-  color: #ffffff;
+  color: var(--text-inverse);
   font-size: 1.1rem;
   cursor: pointer;
   margin-bottom: 0.5rem;
@@ -170,4 +180,23 @@
 
 .sidebar-nav__icon {
   flex-shrink: 0;
+}
+/* Sidebar always sits on a dark navy background regardless of app theme,
+   so it needs its own lighter scrollbar thumb rather than the page one. */
+.sidebar-nav__list {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+.sidebar-nav__list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-nav__list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+}
+
+.sidebar-nav__list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }

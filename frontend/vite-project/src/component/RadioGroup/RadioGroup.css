@@ -11,7 +11,7 @@
   padding: 0;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #33415c;
+  color: var(--text-secondary);
 }
 
 .radio-group__options {
@@ -25,15 +25,15 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9375rem;
-  color: #33415c;
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
 .radio-group__input {
   width: 1.05rem;
   height: 1.05rem;
-  /* background-color: #f5f7fa; */
-  accent-color: #12305c;
+  /* background-color: var(--bg-subtle); */
+  accent-color: var(--text-heading);
   cursor: pointer;
 }
 

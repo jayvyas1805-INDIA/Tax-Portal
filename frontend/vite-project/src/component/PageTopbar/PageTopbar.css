@@ -5,20 +5,20 @@
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1.25rem 2rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e6eaf1;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
 }
 
 .page-topbar__title {
   font-size: 1.25rem;
   font-weight: 800;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0;
 }
 
 .page-topbar__subtitle {
   font-size: 0.875rem;
-  color: #7a8699;
+  color: var(--text-muted);
   margin: 0.15rem 0 0 0;
 }
 
@@ -44,10 +44,17 @@
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
-  border: 1px solid #e6eaf1;
-  background-color: #f4f6fa;
+  border: 1px solid var(--border);
+  background-color: var(--bg-page);
+  color: var(--text-secondary);
   cursor: pointer;
   font-size: 1rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.page-topbar__icon-btn:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-heading);
 }
 
 .page-topbar__profile {
@@ -56,7 +63,7 @@
   gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #33415c;
+  color: var(--text-secondary);
 }
 
 /* .page-topbar__avatar {
@@ -66,7 +73,7 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: #eef4ff;
+  background-color: var(--accent-soft);
   font-size: 1rem;
 } */
 

@@ -3,7 +3,7 @@
   grid-template-columns: minmax(280px, 420px) 1fr;
   min-height: 100vh;
   min-height: 100dvh;
-  background-color: #f4f6fa;
+  background-color: var(--bg-page);
 }
 
 .partner-login__main {
@@ -24,13 +24,13 @@
 .partner-login__title {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0;
 }
 
 .partner-login__subtitle {
   font-size: 0.9375rem;
-  color: #64748b;
+  color: var(--text-muted);
   margin: -0.5rem 0 0.5rem 0;
 }
 
@@ -44,7 +44,7 @@
   right: 0;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #2f6fed;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -57,7 +57,7 @@
   align-items: center;
   gap: 0.6rem;
   font-size: 0.875rem;
-  color: #33415c;
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
@@ -67,7 +67,7 @@
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.03em;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-transform: uppercase;
   margin: 0.25rem 0;
 }
@@ -92,13 +92,13 @@
 
 .partner-login__footer-note {
   font-size: 0.8125rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-align: center;
   margin: 0.5rem 0 0 0;
 }
 
 .partner-login__footer-note a {
-  color: #12305c;
+  color: var(--text-heading);
   font-weight: 600;
 }
 

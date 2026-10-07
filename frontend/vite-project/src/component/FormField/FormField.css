@@ -11,13 +11,13 @@
   gap: 0.4rem;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #33415c;
+  color: var(--text-secondary);
 }
 
 .form-field__optional {
   font-size: 0.6875rem;
   font-weight: 500;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
@@ -25,20 +25,20 @@
 .form-field__input {
   font-family: inherit;
   font-size: 0.9375rem;
-  color: #1e293b;
+  color: var(--text-secondary);
   padding: 0.7rem 0.875rem;
-  border: 1.5px solid #d7dee8;
+  border: 1.5px solid var(--border);
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: var(--bg-surface);
   outline: none;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .form-field__input::placeholder {
-  color: #9aa5b5;
+  color: var(--text-muted);
 }
 
 .form-field__input:focus {
-  border-color: #12305c;
+  border-color: var(--text-heading);
   box-shadow: 0 0 0 3px rgba(18, 48, 92, 0.12);
 }

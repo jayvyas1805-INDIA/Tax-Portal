@@ -57,9 +57,9 @@ const CommissionTrendChart = ({ data, range, onRangeChange }) => {
           <Line
             type="monotone"
             dataKey="amount"
-            stroke="#2f6fed"
+            stroke="#4f63d2"
             strokeWidth={2.5}
-            dot={{ r: 3, fill: "#2f6fed" }}
+            dot={{ r: 3, fill: "#4f63d2" }}
             activeDot={{ r: 5 }}
           />
         </LineChart>

@@ -1,0 +1,94 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.theme-toggle__track {
+  flex-shrink: 0;
+  width: 34px;
+  height: 20px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.theme-toggle__thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle[aria-checked='true'] .theme-toggle__thumb {
+  transform: translateX(14px);
+}
+
+/* --- Dark-surface variant: for the navy sidebar --- */
+.theme-toggle--dark-surface {
+  color: #b7c4dc;
+}
+
+.theme-toggle--dark-surface:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.theme-toggle--dark-surface .theme-toggle__track {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.theme-toggle--dark-surface .theme-toggle__thumb {
+  color: #111a2e;
+}
+
+.theme-toggle--dark-surface[aria-checked='true'] .theme-toggle__track {
+  background: var(--accent, #4f63d2);
+}
+
+/* --- Light-surface variant: for the white admin header --- */
+.theme-toggle--light-surface {
+  width: auto;
+  color: var(--text-secondary, #44506c);
+}
+
+.theme-toggle--light-surface:hover {
+  background-color: var(--bg-subtle, #f4f5f9);
+}
+
+.theme-toggle--light-surface .theme-toggle__label {
+  display: none;
+}
+
+.theme-toggle--light-surface .theme-toggle__track {
+  background: var(--border, #e6eaf1);
+}
+
+.theme-toggle--light-surface .theme-toggle__thumb {
+  color: #b8792a;
+}
+
+.theme-toggle--light-surface[aria-checked='true'] .theme-toggle__track {
+  background: var(--accent, #4f63d2);
+}
+
+.theme-toggle--light-surface[aria-checked='true'] .theme-toggle__thumb {
+  color: #33409e;
+}

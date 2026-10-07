@@ -3,14 +3,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e6eaf1;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
 }
 
 .navbar__logo {
   font-size: 1rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
 }
 
 .navbar__links {
@@ -21,19 +21,19 @@
 .navbar__link {
   font-size: 0.9375rem;
   font-weight: 500;
-  color: #33415c;
+  color: var(--text-secondary);
   text-decoration: none;
 }
 
 .navbar__link:hover {
-  color: #12305c;
+  color: var(--text-heading);
 }
 
 .navbar__login-btn {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #ffffff;
-  background-color: #12305c;
+  color: var(--text-inverse);
+  background-color: var(--brand);
   border: none;
   border-radius: 8px;
   padding: 0.6rem 1.4rem;

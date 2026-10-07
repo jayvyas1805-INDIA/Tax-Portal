@@ -4,7 +4,7 @@ const ConversionFunnelChart = ({ totalReferrals = 0, proposalShared = 0, convert
   const DATA = [
     { name: "Leads", value: totalReferrals, color: "#12305c" },
     { name: "Converted", value: converted, color: "#7fd8a0" },
-    { name: "Proposed", value: proposalShared, color: "#2f6fed" },
+    { name: "Proposed", value: proposalShared, color: "#4f63d2" },
   ];
 
   const maxValue = DATA[0].value || 1; // avoid divide-by-zero when totalReferrals is 0

@@ -9,7 +9,7 @@
 
 .pagination__summary {
   font-size: 0.8125rem;
-  color: #7a8699;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -29,16 +29,16 @@
   font-family: inherit;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #33415c;
-  background-color: #ffffff;
-  border: 1px solid #e6eaf1;
+  color: var(--text-secondary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 6px;
   cursor: pointer;
 }
 
 .pagination__nav-btn:hover:not(:disabled),
 .pagination__page-btn:hover {
-  border-color: #12305c;
+  border-color: var(--text-heading);
 }
 
 .pagination__nav-btn:disabled {
@@ -47,7 +47,7 @@
 }
 
 .pagination__page-btn--active {
-  background-color: #12305c;
-  border-color: #12305c;
-  color: #ffffff;
+  background-color: var(--brand);
+  border-color: var(--text-heading);
+  color: var(--text-inverse);
 }

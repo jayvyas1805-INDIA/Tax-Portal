@@ -2,16 +2,17 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  background-color: #ffffff;
-  border: 1px solid #e6eaf1;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
   padding: 1.5rem;
 }
 
 .submit-documents-card__title {
   font-size: 1rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0;
 }
 
@@ -25,7 +26,7 @@
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-transform: uppercase;
   margin: 0;
 }
@@ -42,13 +43,13 @@
   font-family: inherit;
   font-size: 0.875rem;
   padding: 0.7rem 0.9rem;
-  border: 1.5px solid #d7dee8;
+  border: 1.5px solid var(--border);
   border-radius: 8px;
   outline: none;
 }
 
 .submit-documents-card__input:focus {
-  border-color: #12305c;
+  border-color: var(--text-heading);
 }
 
 .submit-documents-card__upload-btn,
@@ -59,9 +60,9 @@
   font-family: inherit;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #33415c;
-  background-color: #f8fafc;
-  border: 1.5px solid #d7dee8;
+  color: var(--text-secondary);
+  background-color: var(--bg-subtle);
+  border: 1.5px solid var(--border);
   border-radius: 8px;
   padding: 0.7rem 1rem;
   cursor: pointer;
@@ -70,7 +71,7 @@
 
 .submit-documents-card__upload-btn:hover,
 .submit-documents-card__replace-btn:hover {
-  border-color: #12305c;
+  border-color: var(--text-heading);
 }
 
 .submit-documents-card__photo-zone {
@@ -78,7 +79,7 @@
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-  background-color: #f8fafc;
+  background-color: var(--bg-subtle);
   border: 1.5px dashed #c7d2e0;
   border-radius: 10px;
   padding: 1rem 1.25rem;
@@ -91,7 +92,7 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: #eef4ff;
+  background-color: var(--accent-soft);
   font-size: 1.25rem;
   flex-shrink: 0;
 }
@@ -104,13 +105,13 @@
 .submit-documents-card__photo-hint {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #33415c;
+  color: var(--text-secondary);
   margin: 0;
 }
 
 .submit-documents-card__photo-subhint {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin: 0.15rem 0 0 0;
 }
 
@@ -119,7 +120,7 @@
   justify-content: flex-end;
   gap: 0.75rem;
   padding-top: 0.5rem;
-  border-top: 1px solid #e6eaf1;
+  border-top: 1px solid var(--border);
 }
 
 @media (max-width: 480px) {

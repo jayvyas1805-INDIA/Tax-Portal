@@ -1,7 +1,8 @@
 .verification-history-table {
-  background-color: #ffffff;
-  border: 1px solid #e6eaf1;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.06);
   padding: 1.5rem;
 }
 
@@ -17,7 +18,7 @@
 .verification-history-table__title {
   font-size: 0.9375rem;
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   margin: 0;
 }
 
@@ -30,9 +31,9 @@
   font-family: inherit;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: #33415c;
-  background-color: #ffffff;
-  border: 1.5px solid #d7dee8;
+  color: var(--text-secondary);
+  background-color: var(--bg-surface);
+  border: 1.5px solid var(--border);
   border-radius: 8px;
   padding: 0.5rem 0.9rem;
   cursor: pointer;
@@ -53,27 +54,27 @@
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-transform: uppercase;
   padding: 0.6rem 0.75rem;
-  border-bottom: 1px solid #e6eaf1;
+  border-bottom: 1px solid var(--border);
   white-space: nowrap;
 }
 
 .verification-history-table__table td {
   padding: 0.85rem 0.75rem;
-  border-bottom: 1px solid #f1f4f8;
-  color: #33415c;
+  border-bottom: 1px solid var(--bg-subtle);
+  color: var(--text-secondary);
 }
 
 .verification-history-table__doc-type {
   font-weight: 700;
-  color: #12305c;
+  color: var(--text-heading);
   white-space: nowrap;
 }
 
 .verification-history-table__remarks {
-  color: #7a8699;
+  color: var(--text-muted);
   max-width: 260px;
 }
 
@@ -81,7 +82,7 @@
   font-family: inherit;
   font-size: 0.8125rem;
   font-weight: 700;
-  color: #2f6fed;
+  color: var(--accent);
   background: none;
   border: none;
   cursor: pointer;

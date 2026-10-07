@@ -2,13 +2,13 @@
   position: relative;
   border: 1.5px dashed #c7d2e0;
   border-radius: 10px;
-  background-color: #fafbfd;
+  background-color: var(--bg-subtle);
   transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .file-upload-field--active {
-  border-color: #12305c;
-  background-color: #eef4ff;
+  border-color: var(--text-heading);
+  background-color: var(--accent-soft);
 }
 
 .file-upload-field__label {
@@ -34,7 +34,7 @@
 
 .file-upload-field__hint {
   font-size: 0.8125rem;
-  color: #7a8699;
+  color: var(--text-muted);
 }
 
 .file-upload-field__input {
