@@ -126,6 +126,7 @@ const PartnerDashboard = () => {
     rejected: 0,
     tier: "",
     commissionPercent: 0,
+    tdsRate: 0,
   });
   const currentYear = new Date().getFullYear();
 
@@ -183,7 +184,13 @@ const PartnerDashboard = () => {
       metaTone: "neutral",
     },
     {
-      label: "Partner Tier",
+      label: "TDS",
+      value: `${stats.tdsRate ?? 0}%`,
+      meta: "Deducted on commission payout",
+      metaTone: "neutral",
+    },
+    {
+      label: "DSA Tier",
       value: stats.tier,
       meta: `${stats.commissionPercent}% commission`,
       metaTone: "positive",
@@ -331,7 +338,7 @@ const PartnerDashboard = () => {
     <div className="partner-dashboard">
       <SidebarNav
         brandTitle="Udyog Mantra"
-        brandSubtitle="Partner Portal"
+        brandSubtitle="Direct Sales Agent Portal"
         items={NAV_ITEMS}
         footerItems={FOOTER_ITEMS}
         activeId={activeNavId}
@@ -341,7 +348,7 @@ const PartnerDashboard = () => {
       <div className="partner-dashboard__content">
         {/* <DashboardTopbar partnerName="Jonathan Doe" completionPercentage={85} /> */}
         <PageTopbar
-          title="Partner Dashboard"
+          title="Direct Sales Agent Dashboard"
           // subtitle= {}
           completionPercentage={completionPercentage.percentage}
           // partnerName="Jonathan Doe"

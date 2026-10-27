@@ -277,6 +277,7 @@ import PDFDocument from "pdfkit";
 import Commission from "../models/Commission.js";
 import Partner from "../models/Partner.js";
 import createNotification from "../utils/createNotification.js";
+import { calculateTds, withTds, getTdsRate } from "../utils/tds.js";
 
 const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -389,7 +390,8 @@ export const getTransactions = async (req, res) => {
 
     return res.status(200).json({
       success: true,
-      transactions,
+      transactions: transactions.map(withTds),
+      tdsRate: getTdsRate(),
       totalItems,
       totalPages: Math.max(1, Math.ceil(totalItems / pageSize)),
       currentPage: page,
@@ -415,7 +417,7 @@ export const exportTransactions = async (req, res) => {
     const transactions = await Commission.find(query).sort({ createdAt: -1 });
 
     if (format === "csv") {
-      const header = "Transaction ID,Referral ID,Client Name,Business Value,Commission Rate,Amount,Status,Date\n";
+      const header = "Transaction ID,Referral ID,Client Name,Business Value,Commission Rate,Amount,TDS,Status,Date\n";
       const rows = transactions
         .map((t) =>
           [
@@ -425,6 +427,7 @@ export const exportTransactions = async (req, res) => {
             t.businessValue,
             `${t.commissionRate}%`,
             t.amount,
+            calculateTds(t.amount),
             t.status,
             t.createdAt.toISOString().split("T")[0],
           ].join(",")
@@ -447,10 +450,11 @@ export const exportTransactions = async (req, res) => {
 
     const columns = [
       { label: "Transaction ID", width: 110 },
-      { label: "Client Name", width: 160 },
+      { label: "Client Name", width: 140 },
       { label: "Business Value", width: 110 },
       { label: "Comm. Rate", width: 90 },
-      { label: "Amount", width: 100 },
+      { label: "Amount", width: 90 },
+      { label: "TDS", width: 80 },
       { label: "Status", width: 90 },
       { label: "Date", width: 90 },
     ];
@@ -474,6 +478,7 @@ export const exportTransactions = async (req, res) => {
         `Rs. ${t.businessValue.toLocaleString()}`,
         `${t.commissionRate}%`,
         `Rs. ${t.amount.toLocaleString()}`,
+        `Rs. ${calculateTds(t.amount).toLocaleString()}`,
         t.status,
         t.createdAt.toISOString().split("T")[0],
       ];

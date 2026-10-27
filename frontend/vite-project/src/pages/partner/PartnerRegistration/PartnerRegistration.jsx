@@ -83,7 +83,7 @@ const getCompletionPercentage = (
 
 const SIDE_PANEL_CONTENT = {
   1: {
-    heading: "Register as a Udyog Mantra Partner and earn commissions.",
+    heading: "Register as a Udyog Mantra Direct Sales Agent and earn commissions.",
     description:
       "Join a growing network of tax and financial professionals earning recurring commissions for every successful referral.",
     features: [
@@ -94,8 +94,8 @@ const SIDE_PANEL_CONTENT = {
     image: handshake
   },
   2: {
-    heading: "Register as a Udyog Mantra Partner and earn commissions.",
-    description: "Tell us about your professional background so we can tailor your partner experience.",
+    heading: "Register as a Udyog Mantra Direct Sales Agent and earn commissions.",
+    description: "Tell us about your professional background so we can tailor your direct sales agent experience.",
     features: [
       { icon: "🛡️", title: "Institutional Trust", description: "Join a network of elite financial professionals backed by modern SaaS efficiency." },
       { icon: "🔁", title: "Transparent Payouts", description: "Real-time tracking of commissions and automated monthly settlements." },

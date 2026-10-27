@@ -27,6 +27,7 @@ const SubmitDocumentsCard = ({
           <input
             type="text"
             placeholder="Enter PAN Number"
+            maxLength={10}
             value={panNumber}
             onChange={(event) => onPanNumberChange(event.target.value)}
             className="submit-documents-card__input"
@@ -49,6 +50,8 @@ const SubmitDocumentsCard = ({
           <input
             type="text"
             placeholder="Enter Aadhaar Number"
+            maxLength={12}
+            inputMode="numeric"
             value={aadhaarNumber}
             onChange={(event) => onAadhaarNumberChange(event.target.value)}
             className="submit-documents-card__input"

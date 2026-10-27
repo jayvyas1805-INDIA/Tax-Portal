@@ -42,3 +42,9 @@
   border-color: var(--text-heading);
   box-shadow: 0 0 0 3px rgba(18, 48, 92, 0.12);
 }
+
+.form-field__error {
+  margin: 4px 0 0;
+  font-size: 0.8125rem;
+  color: #d93025;
+}

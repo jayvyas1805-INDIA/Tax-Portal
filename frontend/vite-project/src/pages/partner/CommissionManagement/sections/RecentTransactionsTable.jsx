@@ -40,6 +40,7 @@ const RecentTransactionsTable = ({
               <th>Business Value</th>
               <th>Comm. Rate</th>
               <th>Amount</th>
+              <th>TDS</th>
               <th>Status</th>
               <th>Date</th>
             </tr>
@@ -47,7 +48,7 @@ const RecentTransactionsTable = ({
           <tbody>
             {transactions.length === 0 ? (
               <tr>
-                <td colSpan={8} className="recent-transactions-table__empty">
+                <td colSpan={9} className="recent-transactions-table__empty">
                   No transactions yet.
                 </td>
               </tr>
@@ -63,6 +64,12 @@ const RecentTransactionsTable = ({
                   <td>{transaction.commissionRate}%</td>
                   <td className="recent-transactions-table__amount">
                     ₹{transaction.amount.toLocaleString()}
+                  </td>
+                  <td className="recent-transactions-table__tds">
+                    ₹{(transaction.tdsAmount ?? 0).toLocaleString()}
+                    {transaction.tdsRate != null && (
+                      <span className="recent-transactions-table__tds-rate"> ({transaction.tdsRate}%)</span>
+                    )}
                   </td>
                   <td>
                     <StatusBadge label={transaction.status} />

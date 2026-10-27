@@ -1,3 +1,4 @@
+import { getTdsRate } from "../utils/tds.js";
 import Referral from "../models/Referral.js";
 import Partner from "../models/Partner.js";
 import Commission from "../models/Commission.js"
@@ -64,6 +65,7 @@ export const getDashboardStats = async (req, res) => {
         underReview,
         proposalShared,
         rejected,
+        tdsRate: getTdsRate(),
 
         // Partner tier information
         tier: partner.tier,

@@ -7,6 +7,7 @@ const OCCUPATION_OPTIONS = [
   { value: "tax_consultant", label: "Senior Tax Consultant" },
   { value: "financial_advisor", label: "Financial Advisor" },
   { value: "lawyer", label: "Lawyer" },
+  { value: "csp_business_owner", label: "CSP Business Owner" },
   { value: "other", label: "Other" },
 ];
 

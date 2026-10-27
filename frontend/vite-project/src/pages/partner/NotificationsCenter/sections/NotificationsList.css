@@ -31,6 +31,10 @@
   background-color: #f5f8ff;
 }
 
+:root[data-theme="dark"] .notifications-list__item--unread {
+  background-color: var(--bg-subtle);
+}
+
 .notifications-list__icon {
   flex-shrink: 0;
   display: flex;

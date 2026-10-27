@@ -1,9 +1,10 @@
+import logo from "../../../assets/logo.png";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
 
 /**
- * TaxPartner Portal — landing page
+ * Udyog Mantra — landing page
  * Direct clone of the reference: soft lavender-white background,
  * navy headings/buttons, light-blue accent chips, clean sans-serif type.
  */
@@ -348,7 +349,7 @@ export default function Landing() {
 
       <div className="tp-shell">
         <header className="tp-header">
-          <div className="tp-logo">TaxPartner Portal</div>
+          <div className="tp-logo"><img src={logo} alt="Udyog Mantra" style={{ height: 48, width: "auto", display: "block" }} /></div>
           <button className="tp-login" onClick={() => navigate("/partner-login")}>
             Login
           </button>
@@ -377,7 +378,7 @@ export default function Landing() {
         </section>
 
         <section className="tp-why">
-          <h2>Why Partner with Us?</h2>
+          <h2>Why Join Us as a Direct Sales Agent?</h2>
           <p className="sub">A platform designed for professionals, by professionals.</p>
           <div className="feature-grid">
             {features.map((f) => (
@@ -388,8 +389,8 @@ export default function Landing() {
 
         <footer className="tp-footer">
           <div>
-            <div className="brand">TAXPARTNER PORTAL</div>
-            <div className="tag">© 2024 TaxPartner Portal. All rights reserved. Precise. Reliable. Secure.</div>
+            <div className="brand">UDYOG MANTRA</div>
+            <div className="tag">© 2024 Udyog Mantra. All rights reserved. Precise. Reliable. Secure.</div>
           </div>
           <div className="links">
             <a href="#privacy">Privacy Policy</a>

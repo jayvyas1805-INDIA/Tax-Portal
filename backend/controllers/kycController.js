@@ -233,6 +233,13 @@ export const resubmitKycDocuments = async (req, res) => {
       passportPhotoFile: "photo",
     };
 
+    if (panNumber && !/^[A-Z]{5}[0-9]{4}[A-Z]$/.test(String(panNumber).toUpperCase())) {
+      return res.status(400).json({ success: false, message: "PAN number must be a valid 10-character PAN." });
+    }
+    if (aadhaarNumber && !/^[0-9]{12}$/.test(String(aadhaarNumber))) {
+      return res.status(400).json({ success: false, message: "Aadhaar number must be exactly 12 digits." });
+    }
+
     const uploadEntries = Object.entries(files).filter(([, fileArr]) => fileArr?.[0]);
 
     if (uploadEntries.length === 0 && !panNumber && !aadhaarNumber) {

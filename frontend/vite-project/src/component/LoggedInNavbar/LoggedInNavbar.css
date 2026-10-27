@@ -76,3 +76,9 @@
     display: none;
   }
 }
+
+.logged-in-navbar__logo-img {
+  display: block;
+  height: 48px;
+  width: auto;
+}

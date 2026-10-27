@@ -55,6 +55,20 @@ export const registerPartner = async (req, res) => {
       });
     }
 
+    if (!/^[A-Z]{5}[0-9]{4}[A-Z]$/.test(String(panNumber || "").toUpperCase())) {
+      return res.status(400).json({
+        success: false,
+        message: "PAN number must be a valid 10-character PAN (e.g. ABCDE1234F).",
+      });
+    }
+
+    if (!/^[0-9]{12}$/.test(String(aadhaarNumber || ""))) {
+      return res.status(400).json({
+        success: false,
+        message: "Aadhaar number must be exactly 12 digits.",
+      });
+    }
+
     const existingPartner = await Partner.findOne({ email: emailAddress });
     if (existingPartner) {
       return res.status(409).json({
@@ -153,7 +167,7 @@ export const registerPartner = async (req, res) => {
     const verificationUrl = `${process.env.FRONTEND_DEV_URL}/verify-email/${rawVerificationToken}`;
     // sendEmail({
     //   to: partner.email,
-    //   subject: "Verify your email — TaxPartner Portal",
+    //   subject: "Verify your email — Udyog Mantra",
     //   html: `
     //     <p>Welcome, ${fullName}!</p>
     //     <p>Please verify your email to secure your partner account.</p>
@@ -478,7 +492,7 @@ export const forgotPassword = async (req, res) => {
 
     await sendEmail({
       to: user.email,
-      subject: "Reset your TaxPartner Portal password",
+      subject: "Reset your Udyog Mantra password",
       html: `
         <p>You requested a password reset.</p>
         <p><a href="${resetUrl}">Click here to reset your password</a></p>

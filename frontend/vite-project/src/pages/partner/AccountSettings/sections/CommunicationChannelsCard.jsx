@@ -4,7 +4,7 @@ const CHANNELS = [
   { id: "emailNotifications", label: "Email Notifications", note: "Important account and update alerts" },
   { id: "smsNotifications", label: "SMS Notifications", note: "Security codes and critical payout info" },
   { id: "whatsappNotifications", label: "WhatsApp Notifications", note: "Instant chat-based referral alerts" },
-  { id: "marketingEmails", label: "Marketing Emails", note: "Tips, offers, and news about the partner program" },
+  { id: "marketingEmails", label: "Marketing Emails", note: "Tips, offers, and news about the direct sales agent program" },
 ];
 
 const CommunicationChannelsCard = ({ preferences, onToggle }) => {

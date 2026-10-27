@@ -1,7 +1,11 @@
 import FormField from "../../../../component/FormField/FormField";
 import FileUploadField from "../../../../component/FileUploadField/FileUploadField";
 import Button from "../../../../component/Button/Button";
+import { useState } from "react";
 import "./KYCVerificationStep.css";
+
+const PAN_REGEX = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
+const AADHAAR_REGEX = /^[0-9]{12}$/;
 
 const KYCVerificationStep = ({
   formData,
@@ -10,12 +14,45 @@ const KYCVerificationStep = ({
   onNext,
   onPrevious,
 }) => {
+  const [errors, setErrors] = useState({ panNumber: "", aadhaarNumber: "" });
+
+  const validatePan = (value) => {
+    if (!value) return "PAN number is required.";
+    if (value.length !== 10) return "PAN number must be exactly 10 characters.";
+    if (!PAN_REGEX.test(value)) return "Enter a valid PAN (e.g. ABCDE1234F).";
+    return "";
+  };
+
+  const validateAadhaar = (value) => {
+    if (!value) return "Aadhaar number is required.";
+    if (value.length !== 12) return "Aadhaar number must be exactly 12 digits.";
+    if (!AADHAAR_REGEX.test(value)) return "Aadhaar number must contain digits only.";
+    return "";
+  };
+
   const handleChange = (event) => {
-    onFieldChange(event.target.name, event.target.value);
+    const { name } = event.target;
+    let value = event.target.value;
+
+    if (name === "panNumber") {
+      value = value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 10);
+      setErrors((previous) => ({ ...previous, panNumber: validatePan(value) }));
+    } else if (name === "aadhaarNumber") {
+      value = value.replace(/\D/g, "").slice(0, 12);
+      setErrors((previous) => ({ ...previous, aadhaarNumber: validateAadhaar(value) }));
+    }
+
+    onFieldChange(name, value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const nextErrors = {
+      panNumber: validatePan(formData.panNumber || ""),
+      aadhaarNumber: validateAadhaar(formData.aadhaarNumber || ""),
+    };
+    setErrors(nextErrors);
+    if (nextErrors.panNumber || nextErrors.aadhaarNumber) return;
     onNext();
   };
 
@@ -37,15 +74,20 @@ const KYCVerificationStep = ({
           placeholder="ABCDE1234F"
           value={formData.panNumber}
           onChange={handleChange}
+          maxLength={10}
+          error={errors.panNumber}
           required
         />
         <FormField
           id="aadhaarNumber"
           name="aadhaarNumber"
           label="Aadhaar Number"
-          placeholder="0000 0000 0000"
+          placeholder="000000000000"
           value={formData.aadhaarNumber}
           onChange={handleChange}
+          maxLength={12}
+          inputMode="numeric"
+          error={errors.aadhaarNumber}
           required
         />
       </div>

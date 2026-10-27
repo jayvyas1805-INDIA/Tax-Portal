@@ -90,3 +90,12 @@
     padding: 2rem;
   }
 }
+
+.auth-side-panel__logo-img {
+  display: block;
+  height: 56px;
+  width: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 4px 8px;
+}

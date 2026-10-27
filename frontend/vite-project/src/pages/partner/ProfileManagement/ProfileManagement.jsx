@@ -273,7 +273,7 @@ const ProfileManagement = () => {
       <div className="profile-management">
         <SidebarNav
           brandTitle="Udyog Mantra"
-          brandSubtitle="Partner Portal"
+          brandSubtitle="Direct Sales Agent Portal"
           items={NAV_ITEMS}
           footerItems={FOOTER_ITEMS}
           activeId={activeNavId}
@@ -291,7 +291,7 @@ const ProfileManagement = () => {
     <div className="profile-management">
       <SidebarNav
         brandTitle="Udyog Mantra"
-        brandSubtitle="Partner Portal"
+        brandSubtitle="Direct Sales Agent Portal"
         items={NAV_ITEMS}
         footerItems={FOOTER_ITEMS}
         activeId={activeNavId}

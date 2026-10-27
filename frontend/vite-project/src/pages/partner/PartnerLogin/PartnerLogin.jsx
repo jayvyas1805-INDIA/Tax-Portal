@@ -8,7 +8,7 @@ import { login } from "../../../api/authApi";
 import "./PartnerLogin.css";
 
 const SIDE_PANEL_STATS = [
-  { value: "500+", label: "Active Partners" },
+  { value: "500+", label: "Active Direct Sales Agents" },
   { value: "$2.4B", label: "Managed Assets" },
 ];
 
@@ -55,9 +55,9 @@ const PartnerLogin = () => {
   return (
     <div className="partner-login">
       <AuthSidePanel
-        logoText="TaxPartner Portal"
+        logoText="Udyog Mantra"
         heading="Empowering Tax Professionals Globally"
-        description="Join an elite network of partners. Access institutional-grade tools, seamless client referrals, and automated payout management."
+        description="Join an elite network of direct sales agents. Access institutional-grade tools, seamless client referrals, and automated payout management."
         stats={SIDE_PANEL_STATS}
       />
 

@@ -11,6 +11,9 @@ const FormField = ({
   optional = false,
   required = false,
   disabled = false, // NEW
+  maxLength,
+  inputMode,
+  error = "",
 }) => {
   return (
     <div className="form-field">
@@ -32,8 +35,12 @@ const FormField = ({
         placeholder={placeholder}
         required={required}
         disabled={disabled}   // NEW
+        maxLength={maxLength}
+        inputMode={inputMode}
+        aria-invalid={error ? "true" : undefined}
         className="form-field__input"
       />
+      {error && <p className="form-field__error" role="alert">{error}</p>}
     </div>
   );
 };

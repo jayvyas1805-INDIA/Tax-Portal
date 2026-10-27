@@ -24,7 +24,7 @@ const FinalAcceptanceStep = ({
     <form className="final-acceptance-step" onSubmit={handleSubmit}>
       <h3 className="final-acceptance-step__title">Final Acceptance</h3>
       <p className="final-acceptance-step__subtitle">
-        Please confirm you agree to our policies to complete your partner
+        Please confirm you agree to our policies to complete your direct sales agent
         registration.
       </p>
 
@@ -35,7 +35,7 @@ const FinalAcceptanceStep = ({
           checked={agreedToTermsConditions}
           onChange={onAgreementChange}
         >
-          I agree to the <a href="#terms-conditions">Terms &amp; Conditions</a>
+          I agree to the <a href="/Udyog_Mantra_DSA_Application_and_Terms.pdf" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a> (DSA Application &amp; Terms)
         </Checkbox>
         <Checkbox
           id="agreePrivacyPolicy"
@@ -56,7 +56,7 @@ const FinalAcceptanceStep = ({
           ← Previous
         </Button>
         <Button type="submit" variant="primary" disabled={!canRegister}>
-          {isSubmitting ? "Submitting..." : "Register as Partner →"}
+          {isSubmitting ? "Submitting..." : "Register as Direct Sales Agent →"}
         </Button>
       </div>
 

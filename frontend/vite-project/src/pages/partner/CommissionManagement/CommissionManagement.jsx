@@ -232,7 +232,7 @@ const CommissionManagement = () => {
     <div className="commission-management">
       <SidebarNav
         brandTitle="Udyog Mantra"
-        brandSubtitle="Partner Portal"
+        brandSubtitle="Direct Sales Agent Portal"
         items={NAV_ITEMS}
         footerItems={FOOTER_ITEMS}
         activeId={activeNavId}

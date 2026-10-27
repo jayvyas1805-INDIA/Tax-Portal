@@ -92,3 +92,12 @@
 .recent-transactions-table__amount {
   font-weight: 700;
 }
+
+.recent-transactions-table__tds {
+  white-space: nowrap;
+}
+
+.recent-transactions-table__tds-rate {
+  opacity: 0.65;
+  font-size: 0.8em;
+}

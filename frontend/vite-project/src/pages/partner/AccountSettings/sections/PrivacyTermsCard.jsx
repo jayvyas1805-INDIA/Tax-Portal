@@ -3,7 +3,8 @@ import "./PrivacyTermsCard.css";
 const LINKS = [
   { label: "Privacy Policy", href: "#privacy-policy" },
   { label: "Terms of Service", href: "#terms-of-service" },
-  { label: "Partner Agreement", href: "#partner-agreement" },
+  { label: "Direct Sales Agent Agreement", href: "/Udyog_Mantra_DSA_Application_and_Terms.pdf" },
+  { label: "DSA Application & Terms (PDF)", href: "/Udyog_Mantra_DSA_Application_and_Terms.pdf" },
 ];
 
 const PrivacyTermsCard = ({ memberSince }) => {
@@ -14,7 +15,7 @@ const PrivacyTermsCard = ({ memberSince }) => {
       <ul className="privacy-terms-card__list">
         {LINKS.map((link) => (
           <li key={link.label}>
-            <a href={link.href} className="privacy-terms-card__link">
+            <a href={link.href} className="privacy-terms-card__link" {...(link.href.endsWith(".pdf") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
               {link.label}
               <span aria-hidden="true">↗</span>
             </a>

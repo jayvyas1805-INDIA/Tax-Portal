@@ -49,3 +49,8 @@
     display: none;
   }
 }
+.navbar__logo-img {
+  display: block;
+  height: 48px;
+  width: auto;
+}

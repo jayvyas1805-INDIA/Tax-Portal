@@ -118,7 +118,7 @@ const ReviewSubmitStep = ({
         checked={agreedToTerms}
         onChange={onAgreeChange}
       >
-        I agree to the <a href="#terms">Partner Terms of Service</a> and
+        I agree to the <a href="/Udyog_Mantra_DSA_Application_and_Terms.pdf" target="_blank" rel="noopener noreferrer">Direct Sales Agent Terms of Service</a> and
         verify that all provided information is accurate and legally
         binding.
       </Checkbox>

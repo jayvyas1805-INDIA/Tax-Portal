@@ -9,6 +9,7 @@ const OCCUPATION_OPTIONS = [
   { value: "financial_advisor", label: "Financial Advisor" },
   { value: "insurance_agent", label: "Insurance Agent" },
   { value: "lawyer", label: "Lawyer" },
+  { value: "csp_business_owner", label: "CSP Business Owner" },
   { value: "other", label: "Other" },
 ];
 

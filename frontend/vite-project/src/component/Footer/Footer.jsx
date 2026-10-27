@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p className="footer__copyright">
-        &copy; 2024 Udyog Mantra | Global Tax Partners Elite Tier
+        &copy; 2024 Udyog Mantra | Direct Sales Agents Elite Tier
       </p>
       <nav className="footer__links">
         <a href="#privacy-policy" className="footer__link">Privacy Policy</a>

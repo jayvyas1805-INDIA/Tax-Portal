@@ -1,9 +1,10 @@
 import "./LoggedInNavbar.css";
+import logo from "../../assets/logo.png";
 
 const LoggedInNavbar = () => {
   return (
     <header className="logged-in-navbar">
-      <span className="logged-in-navbar__logo">🛡️ TaxPartner Portal</span>
+      <span className="logged-in-navbar__logo"><img src={logo} alt="Udyog Mantra" className="logged-in-navbar__logo-img" /></span>
       <nav className="logged-in-navbar__links">
         <a href="#network" className="logged-in-navbar__link">Network</a>
         <a href="#resources" className="logged-in-navbar__link">Resources</a>

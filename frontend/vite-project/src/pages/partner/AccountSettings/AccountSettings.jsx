@@ -249,7 +249,7 @@ const AccountSettings = () => {
     <div className="account-settings">
       <SidebarNav
         brandTitle="Udyog Mantra"
-        brandSubtitle="Partner Portal"
+        brandSubtitle="Direct Sales Agent Portal"
         items={NAV_ITEMS}
         footerItems={FOOTER_ITEMS}
         activeId={activeNavId}

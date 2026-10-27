@@ -1,4 +1,4 @@
-# Tax Partner Management Platform
+# Udyog Mantra – Direct Sales Agent Management Platform
 
 A production-oriented partner management and tax-services platform built with a modern JavaScript stack. The application provides secure partner onboarding, KYC and banking verification, referral and commission management, partner dashboards, administrative controls, notifications, and document management.
 
@@ -8,7 +8,7 @@ The platform is designed around a separate frontend/backend architecture, with t
 
 ## Overview
 
-The Tax Partner Management Platform enables organizations to manage their partner ecosystem throughout the complete partner lifecycle:
+The Udyog Mantra Direct Sales Agent Management Platform enables organizations to manage their partner ecosystem throughout the complete partner lifecycle:
 
 - Partner registration and onboarding
 - Multi-step profile completion

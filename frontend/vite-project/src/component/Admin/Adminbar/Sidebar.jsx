@@ -1,3 +1,4 @@
+import logoIcon from "../../../assets/logo-icon.png";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
@@ -112,9 +113,9 @@ export default function Sidebar() {
         </button>
 
         <div className="admin-sidebar__brand">
-          <span className="admin-sidebar__logo">PP</span>
+          <img src={logoIcon} alt="Udyog Mantra" className="admin-sidebar__logo-img" />
           <div>
-            <p className="admin-sidebar__title">PartnerPortal</p>
+            <p className="admin-sidebar__title">Udyog Mantra</p>
             <p className="admin-sidebar__subtitle">Enterprise Admin</p>
           </div>
         </div>

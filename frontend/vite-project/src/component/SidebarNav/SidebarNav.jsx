@@ -1,7 +1,8 @@
+import logoIcon from "../../assets/logo-icon.png";
 import { useState } from "react";
 import "./SidebarNav.css";
 import { useNavigate } from "react-router-dom";
-import { Menu, X, ShieldCheck } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const SidebarNav = ({
@@ -59,11 +60,7 @@ const SidebarNav = ({
         {/* Brand */}
         <div className="sidebar-nav__brand">
           <p className="sidebar-nav__brand-title">
-            <ShieldCheck
-              size={20}
-              strokeWidth={2}
-              aria-hidden="true"
-            />
+            <img src={logoIcon} alt="" aria-hidden="true" className="sidebar-nav__brand-logo" />
             <span>{brandTitle}</span>
           </p>
 

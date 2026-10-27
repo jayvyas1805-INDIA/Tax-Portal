@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
+import logo from "../../assets/logo.png";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const Sidebar = () => {
 
   return (
     <aside className="sidebar">
-      <h2>TaxPartner Pro</h2>
+      <h2><img src={logo} alt="Udyog Mantra" style={{ height: 44, width: "auto", background: "#fff", borderRadius: 8, padding: 4 }} /></h2>
 
       <ul>
         {menus.map((item) => (

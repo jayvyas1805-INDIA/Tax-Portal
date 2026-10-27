@@ -1,9 +1,10 @@
 import "./AuthSidePanel.css";
+import logo from "../../assets/logo.png";
 
 const AuthSidePanel = ({ logoText, heading, description, stats }) => {
   return (
     <aside className="auth-side-panel">
-      <p className="auth-side-panel__logo">🏛️ {logoText}</p>
+      <p className="auth-side-panel__logo"><img src={logo} alt={logoText} className="auth-side-panel__logo-img" /></p>
 
       <div className="auth-side-panel__content">
         <h2 className="auth-side-panel__heading">{heading}</h2>
@@ -20,10 +21,10 @@ const AuthSidePanel = ({ logoText, heading, description, stats }) => {
       </div>
 
       <div className="auth-side-panel__footer">
-        <span>&copy; 2024 Global Tax Partners</span>
+        <span>&copy; 2024 Udyog Mantra</span>
         <div className="auth-side-panel__footer-links">
           <a href="#privacy-policy">Privacy Policy</a>
-          <a href="#terms-of-service">Terms of Service</a>
+          <a href="/Udyog_Mantra_DSA_Application_and_Terms.pdf" target="_blank" rel="noopener noreferrer">Terms of Service</a>
         </div>
       </div>
     </aside>

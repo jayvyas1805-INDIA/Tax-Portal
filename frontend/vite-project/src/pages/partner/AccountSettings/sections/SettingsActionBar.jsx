@@ -5,7 +5,7 @@ const SettingsActionBar = ({ onReset, onSaveSettings, isSaving }) => {
   return (
     <div className="settings-action-bar">
       <p className="settings-action-bar__warning">
-        ⚠ Changes here affect your global partner profile and payout
+        ⚠ Changes here affect your global direct sales agent profile and payout
         notifications.
       </p>
       <div className="settings-action-bar__buttons">

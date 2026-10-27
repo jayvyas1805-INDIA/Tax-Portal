@@ -192,6 +192,15 @@ const KycDocuments = () => {
       return;
     }
 
+    if (panNumberChanged && !/^[A-Z]{5}[0-9]{4}[A-Z]$/.test(panNumber)) {
+      setSubmitError("PAN number must be a valid 10-character PAN (e.g. ABCDE1234F).");
+      return;
+    }
+    if (aadhaarNumberChanged && !/^[0-9]{12}$/.test(aadhaarNumber)) {
+      setSubmitError("Aadhaar number must be exactly 12 digits.");
+      return;
+    }
+
     setIsSubmitting(true);
     try {
       const response = await resubmitKycDocuments({
@@ -256,7 +265,7 @@ const KycDocuments = () => {
     <div className="kyc-documents">
       <SidebarNav
         brandTitle="Udyog Mantra"
-        brandSubtitle="Partner Portal"
+        brandSubtitle="Direct Sales Agent Portal"
         items={NAV_ITEMS}
         footerItems={FOOTER_ITEMS}
         activeId={activeNavId}
@@ -296,8 +305,8 @@ const KycDocuments = () => {
                   <SubmitDocumentsCard
                     panNumber={panNumber}
                     aadhaarNumber={aadhaarNumber}
-                    onPanNumberChange={setPanNumber}
-                    onAadhaarNumberChange={setAadhaarNumber}
+                    onPanNumberChange={(v) => setPanNumber(v.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 10))}
+                    onAadhaarNumberChange={(v) => setAadhaarNumber(v.replace(/\D/g, "").slice(0, 12))}
                     fileNames={fileNames}
                     onFileChange={handleFileChange}
                     onDiscard={handleDiscard}
