@@ -14,7 +14,7 @@
 }
 
 .bm__state--error {
-  color: #d0342c;
+  color: var(--danger-text);
 }
 
 .bm__topbar {
@@ -96,7 +96,7 @@
 }
 
 .bm-card__note.is-up {
-  color: #1f9d55;
+  color: var(--success-text);
 }
 
 .bm-card__progress {

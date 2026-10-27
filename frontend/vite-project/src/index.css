@@ -21,6 +21,17 @@
   --scrollbar-thumb-hover: #a9b3cc;
   --scrollbar-track: transparent;
 
+  /* ---- status colours for TEXT on page/card surfaces (brighter in dark mode) ---- */
+  --success-text: #1f9d55;
+  --danger-text: #d0342c;
+  --warning-text: #c07a00;
+  --danger-border: #f3d2d0;
+  --danger-soft: #fdecea;
+  --notice-info-bg: #f4f8ff;
+  --notice-info-border: #dce6fb;
+  --notice-success-bg: #f2faf5;
+  --notice-success-border: #d7f0e0;
+
   /* ---- legacy tokens kept for a couple of unused boilerplate rules ---- */
   --text: var(--text-secondary);
   --text-h: var(--text-heading);
@@ -71,6 +82,17 @@
 
   --scrollbar-thumb: #3a4468;
   --scrollbar-thumb-hover: #4b5686;
+
+
+  --success-text: #3ecf86;
+  --danger-text: #ff7a73;
+  --warning-text: #f2b04a;
+  --danger-border: rgba(255, 122, 115, 0.4);
+  --danger-soft: rgba(255, 122, 115, 0.14);
+  --notice-info-bg: rgba(107, 127, 232, 0.12);
+  --notice-info-border: rgba(107, 127, 232, 0.35);
+  --notice-success-bg: rgba(62, 207, 134, 0.1);
+  --notice-success-border: rgba(62, 207, 134, 0.3);
 
   color-scheme: dark;
 }

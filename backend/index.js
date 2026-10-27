@@ -20,6 +20,7 @@ import adminReviewRoutes from './routes/adminReviewRoutes.js';
 import adminAnalyticsRoutes from './routes/adminAnalyticsRoutes.js';
 import adminNotificationRoutes from './routes/adminNotificationRoutes.js';
 import adminSettingsRoutes from './routes/adminSettingsRoutes.js';
+import adminCdoRoutes from './routes/adminCdoRoutes.js';
 
 dotenv.config();
 
@@ -65,6 +66,7 @@ app.use("/api/admin/analytics", adminAnalyticsRoutes)
 app.use("/api/admin/reviews", adminReviewRoutes)
 app.use("/api/admin/notifications", adminNotificationRoutes)
 app.use("/api/admin/settings", adminSettingsRoutes);
+app.use("/api/admin/cdos", adminCdoRoutes);
 
 const server = async () => {
   try {

@@ -14,7 +14,7 @@
 }
 
 .rf__state--error {
-  color: #d0342c;
+  color: var(--danger-text);
 }
 
 .rf__respond-box {
@@ -146,7 +146,7 @@
 }
 
 .rf-card__value.is-warn {
-  color: #d9433f;
+  color: var(--danger-text);
 }
 
 .rf-card__note {
@@ -156,7 +156,7 @@
 }
 
 .rf-card__note.is-up {
-  color: #1f9d55;
+  color: var(--success-text);
 }
 
 .rf__panel {
@@ -264,7 +264,7 @@
 
 .rf__stars {
   font-size: 13px;
-  color: var(--border);
+  color: var(--scrollbar-thumb); /* empty stars: --border is almost invisible on dark cards */
   letter-spacing: 1px;
 }
 

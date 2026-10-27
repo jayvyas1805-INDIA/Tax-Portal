@@ -14,7 +14,7 @@
 }
 
 .nc__state--error {
-  color: #d0342c;
+  color: var(--danger-text);
 }
 
 .nc__pagination {

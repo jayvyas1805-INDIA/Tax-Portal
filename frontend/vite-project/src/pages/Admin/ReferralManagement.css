@@ -354,7 +354,7 @@
 }
 
 .rm__state--error {
-  color: #d0342c;
+  color: var(--danger-text);
 }
 
 .rm__status-select {

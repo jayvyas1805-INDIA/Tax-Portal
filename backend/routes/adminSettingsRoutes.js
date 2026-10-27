@@ -1,6 +1,6 @@
 import express from "express";
 import { protect } from "../middleware/authMiddleware.js";
-import { adminOnly } from "../middleware/adminMiddleware.js";
+import { adminOnly, adminPanelAccess } from "../middleware/adminMiddleware.js";
 import {
   getCommissionRules,
   createCommissionRule,
@@ -21,7 +21,8 @@ router.patch("/commission-rules/:id", protect, adminOnly, updateCommissionRule);
 
 router.get("/forecast", protect, adminOnly, getQuarterlyForecast);
 
-router.get("/system-config", protect, adminOnly, getSystemConfig);
+// Read-only; the shared Dashboard needs the quarterly goal, so Admin CDO may read it.
+router.get("/system-config", protect, adminPanelAccess, getSystemConfig);
 router.patch("/system-config", protect, adminOnly, updateSystemConfig);
 // in your admin settings routes file
 router.post("/recalculate-tiers", protect, adminOnly, recalculateAllTiers);

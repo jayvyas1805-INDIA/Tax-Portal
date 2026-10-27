@@ -95,11 +95,11 @@
 }
 
 .pm-card__change.is-up {
-  color: #1f9d55;
+  color: var(--success-text);
 }
 
 .pm-card__change.is-warn {
-  color: #c07a00;
+  color: var(--warning-text);
 }
 
 .pm__directory {
@@ -290,7 +290,7 @@
 }
 
 .pm__state--error {
-  color: #d0342c;
+  color: var(--danger-text);
 }
 
 .pm__search {
@@ -311,7 +311,7 @@
 .pm__row-error {
   margin: 4px 0 0;
   font-size: 10.5px;
-  color: #d0342c;
+  color: var(--danger-text);
 }
 
 .pm__footer {

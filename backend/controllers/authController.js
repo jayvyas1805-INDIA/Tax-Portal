@@ -14,6 +14,10 @@ import dotenv from "dotenv";
 dotenv.config();
 const hashToken = (token) => crypto.createHash("sha256").update(token).digest("hex");
 
+// Admin and Admin CDO both live in the Admin collection. Anything that picks
+// a model by role (getMe / refresh / logout) must treat both the same way.
+const isAdminRole = (role) => role === "admin" || role === "admin_cdo";
+
 /**
  * POST /api/auth/partner/register
  * Multipart form-data: all Step 1-7 fields + panCardFile, aadhaarCardFile, passportPhotoFile
@@ -275,6 +279,13 @@ export const login = async (req, res) => {
 
 
 
+      if (admin.isActive === false) {
+        return res.status(403).json({
+          success: false,
+          message: "Your account has been deactivated. Please contact the administrator.",
+        });
+      }
+
       admin.lastLogin = new Date();
 
 
@@ -297,7 +308,7 @@ export const login = async (req, res) => {
 
         refreshToken,
 
-        role: "admin",
+        role: admin.role,
 
         redirectTo: "/admin/dashboard",
 
@@ -437,7 +448,7 @@ export const getMe = async (req, res) => {
   try {
     const { id, role } = req.user;
 
-    const Model = role === "admin" ? Admin : Partner;
+    const Model = isAdminRole(role) ? Admin : Partner;
     const user = await Model.findById(id);
 
     if (!user) {
@@ -589,13 +600,20 @@ export const refreshAccessToken = async (req, res) => {
       return res.status(401).json({ success: false, message: "Refresh token is invalid or expired." });
     }
 
-    const Model = decoded.role === "admin" ? Admin : Partner;
+    const Model = isAdminRole(decoded.role) ? Admin : Partner;
     const user = await Model.findById(decoded.id).select("+refreshTokenHash");
 
     if (!user || user.refreshTokenHash !== hashToken(refreshToken)) {
       return res.status(401).json({
         success: false,
         message: "Refresh token has been revoked. Please log in again.",
+      });
+    }
+
+    if (isAdminRole(decoded.role) && user.isActive === false) {
+      return res.status(401).json({
+        success: false,
+        message: "Your account has been deactivated.",
       });
     }
 
@@ -626,7 +644,7 @@ export const refreshAccessToken = async (req, res) => {
 export const logout = async (req, res) => {
   try {
     const { id, role } = req.user;
-    const Model = role === "admin" ? Admin : Partner;
+    const Model = isAdminRole(role) ? Admin : Partner;
 
     const update = { $unset: { refreshTokenHash: 1 } };
     if (role === "partner") {

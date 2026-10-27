@@ -36,7 +36,7 @@
   background: transparent;
   font-size: 13.5px;
   width: 100%;
-  color: #29304a;
+  color: var(--text-heading);
 }
 
 .admin-header__search input::placeholder {
@@ -58,7 +58,7 @@
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg-surface);
-  color: #545c78;
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
@@ -72,12 +72,12 @@
 }
 
 .admin-header__logout-btn {
-  color: #d0342c;
-  border-color: #f3d2d0;
+  color: var(--danger-text);
+  border-color: var(--danger-border);
 }
 
 .admin-header__logout-btn:hover {
-  background: #fdecea;
+  background: var(--danger-soft);
 }
 
 .admin-header__profile {

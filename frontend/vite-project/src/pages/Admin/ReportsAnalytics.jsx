@@ -215,7 +215,7 @@ export default function ReportsAnalytics() {
           <h3>Referrals by Service Type</h3>
           <div className="ra__donut-wrap">
             <svg viewBox="0 0 42 42" className="ra__donut">
-              <circle cx="21" cy="21" r="15.9" fill="transparent" stroke="#eceef4" strokeWidth="6" />
+              <circle cx="21" cy="21" r="15.9" fill="transparent" style={{ stroke: "var(--border)" }} strokeWidth="6" />
               {donutSegments.map((seg) => (
                 <circle
                   key={seg.label}

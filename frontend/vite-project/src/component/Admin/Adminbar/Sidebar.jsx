@@ -3,20 +3,32 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 import InvitePartnerModal from "../InvitePartnerModal/InvitePartnerModal";
+import { ROLES, getAuthRole } from "../../../utils/authUser";
 
+const ADMIN_ONLY = [ROLES.ADMIN];
+const ADMIN_AND_CDO = [ROLES.ADMIN, ROLES.ADMIN_CDO];
+
+// `roles` decides who sees the item. Admin CDO only gets the three shared pages.
 const NAV_ITEMS = [
-  { label: "Dashboard", path: "/admin/dashboard", icon: "grid" },
-  { label: "Partner Management", path: "/admin/partner-management", icon: "users" },
-  { label: "Referral Management", path: "/admin/referral-management", icon: "link" },
-  { label: "Commission Management", path: "/admin/commission-management", icon: "percent" },
-  { label: "Business Management", path: "/admin/business-management", icon: "briefcase" },
-  { label: "Review & Feedback", path: "/admin/review-feedback", icon: "star" },
-  { label: "Reports & Analytics", path: "/admin/reports-analytics", icon: "bar-chart" },
-  { label: "Notification Center", path: "/admin/notification-center", icon: "bell" },
-  { label: "Settings", path: "/admin/settings", icon: "settings" },
+  { label: "Dashboard", path: "/admin/dashboard", icon: "grid", roles: ADMIN_AND_CDO },
+  { label: "Partner Management", path: "/admin/partner-management", icon: "users", roles: ADMIN_AND_CDO },
+  { label: "Referral Management", path: "/admin/referral-management", icon: "link", roles: ADMIN_AND_CDO },
+  { label: "Admin CDO Management", path: "/admin/cdo-management", icon: "shield", roles: ADMIN_ONLY },
+  { label: "Commission Management", path: "/admin/commission-management", icon: "percent", roles: ADMIN_ONLY },
+  { label: "Business Management", path: "/admin/business-management", icon: "briefcase", roles: ADMIN_ONLY },
+  { label: "Review & Feedback", path: "/admin/review-feedback", icon: "star", roles: ADMIN_ONLY },
+  { label: "Reports & Analytics", path: "/admin/reports-analytics", icon: "bar-chart", roles: ADMIN_ONLY },
+  { label: "Notification Center", path: "/admin/notification-center", icon: "bell", roles: ADMIN_ONLY },
+  { label: "Settings", path: "/admin/settings", icon: "settings", roles: ADMIN_ONLY },
 ];
 
 const ICONS = {
+  shield: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M12 3l7.5 3v5.5c0 4.4-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5.1-7.5-9.5V6L12 3z" />
+      <path d="M9.2 12.2l2 2 3.6-3.8" />
+    </svg>
+  ),
   grid: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <rect x="3" y="3" width="7" height="7" rx="1.5" />
@@ -84,6 +96,10 @@ export default function Sidebar() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  const role = getAuthRole();
+  const isCdo = role === ROLES.ADMIN_CDO;
+  const visibleItems = NAV_ITEMS.filter((item) => item.roles.includes(role));
+
   return (
     <>
       <button
@@ -116,12 +132,12 @@ export default function Sidebar() {
           <img src={logoIcon} alt="Udyog Mantra" className="admin-sidebar__logo-img" />
           <div>
             <p className="admin-sidebar__title">Udyog Mantra</p>
-            <p className="admin-sidebar__subtitle">Enterprise Admin</p>
+            <p className="admin-sidebar__subtitle">{isCdo ? "Admin CDO" : "Enterprise Admin"}</p>
           </div>
         </div>
 
         <nav className="admin-sidebar__nav">
-          {NAV_ITEMS.map((item) => (
+          {visibleItems.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
@@ -136,19 +152,23 @@ export default function Sidebar() {
           ))}
         </nav>
 
-        <button
-          className="admin-sidebar__invite"
-          onClick={() => {
-            setModalOpen(true);
-            setIsOpen(false);
-          }}
-          type="button"
-        >
-          <span className="admin-sidebar__invite-icon">+</span>
-          Invite Partner
-        </button>
+        {!isCdo && (
+          <>
+            <button
+              className="admin-sidebar__invite"
+              onClick={() => {
+                setModalOpen(true);
+                setIsOpen(false);
+              }}
+              type="button"
+            >
+              <span className="admin-sidebar__invite-icon">+</span>
+              Invite Partner
+            </button>
 
-        <InvitePartnerModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+            <InvitePartnerModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
+          </>
+        )}
       </aside>
     </>
   );

@@ -2,9 +2,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLogout } from "../../../hooks/useLogout";
 import ThemeToggle from "../../ThemeToggle/ThemeToggle";
+import { ROLES, getAuthUser } from "../../../utils/authUser";
 import "./Header.css";
 
-export default function Header({ adminName = "Admin" }) {
+export default function Header({ adminName: adminNameProp }) {
+  const authUser = getAuthUser();
+  const isCdo = authUser?.role === ROLES.ADMIN_CDO;
+  const adminName = adminNameProp || authUser?.name || "Admin";
+
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
   const logout = useLogout();
@@ -32,12 +37,14 @@ export default function Header({ adminName = "Admin" }) {
 
       <div className="admin-header__actions">
         <ThemeToggle variant="light-surface" />
-        <button className="admin-header__icon-btn" type="button" aria-label="Notifications" onClick={() => navigate("/admin/notification-center")}>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M6 10a6 6 0 1112 0c0 4 1.3 5.4 1.8 6H4.2c.5-.6 1.8-2 1.8-6z" />
-            <path d="M10 19a2 2 0 004 0" />
-          </svg>
-        </button>
+        {!isCdo && (
+          <button className="admin-header__icon-btn" type="button" aria-label="Notifications" onClick={() => navigate("/admin/notification-center")}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M6 10a6 6 0 1112 0c0 4 1.3 5.4 1.8 6H4.2c.5-.6 1.8-2 1.8-6z" />
+              <path d="M10 19a2 2 0 004 0" />
+            </svg>
+          </button>
+        )}
         <button className="admin-header__icon-btn" type="button" aria-label="Help" onClick={() => navigate("/admin/help")}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <circle cx="12" cy="12" r="9" />
@@ -50,11 +57,13 @@ export default function Header({ adminName = "Admin" }) {
             {adminName
               .split(" ")
               .map((n) => n[0])
-              .join("")}
+              .join("")
+              .slice(0, 2)
+              .toUpperCase()}
           </div>
           <div className="admin-header__profile-text">
             <p className="admin-header__name">{adminName}</p>
-            {/* <p className="admin-header__role">Admin</p> */}
+            {isCdo && <p className="admin-header__role">Admin CDO</p>}
           </div>
         </div>
         <button

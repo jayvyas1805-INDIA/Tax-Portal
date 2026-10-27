@@ -14,7 +14,7 @@
 }
 
 .ra__state--error {
-  color: #d0342c;
+  color: var(--danger-text);
 }
 
 .ra__topbar {
@@ -91,7 +91,7 @@
 }
 
 .ra-card__value.is-accent {
-  color: #d9433f;
+  color: var(--danger-text);
 }
 
 .ra-card__note {
@@ -101,11 +101,11 @@
 }
 
 .ra-card__note.is-up {
-  color: #1f9d55;
+  color: var(--success-text);
 }
 
 .ra-card__note.is-down {
-  color: #d9433f;
+  color: var(--danger-text);
 }
 
 .ra-card__row {

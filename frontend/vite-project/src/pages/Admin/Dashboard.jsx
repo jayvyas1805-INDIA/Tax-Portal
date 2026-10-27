@@ -254,7 +254,7 @@ export default function Dashboard() {
 
           <div>
             <span>Payout Day </span>
-            <strong style={{color: "#4f63d2"}}>
+            <strong style={{color: "var(--accent)"}}>
               {systemConfig?.payoutScheduleDay
                 ? `${systemConfig.payoutScheduleDay}th`
                 : "—"}

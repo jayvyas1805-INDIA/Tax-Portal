@@ -1,6 +1,6 @@
 import express from "express";
 import { protect } from "../middleware/authMiddleware.js";
-import { adminOnly } from "../middleware/adminMiddleware.js";
+import { adminPanelAccess } from "../middleware/adminMiddleware.js";
 import {
   getDashboardStats,
   getRevenueOverview,
@@ -12,11 +12,11 @@ import {
 
 const router = express.Router();
 
-router.get("/stats", protect, adminOnly, getDashboardStats);
-router.get("/revenue", protect, adminOnly, getRevenueOverview);
-router.get("/revenue-chart", protect, adminOnly, getRevenueChart);
-router.get("/funnel", protect, adminOnly, getConversionFunnel);
-router.get("/elite-performers", protect, adminOnly, getElitePerformers);
-router.get("/referral-stream", protect, adminOnly, getReferralStream);
+router.get("/stats", protect, adminPanelAccess, getDashboardStats);
+router.get("/revenue", protect, adminPanelAccess, getRevenueOverview);
+router.get("/revenue-chart", protect, adminPanelAccess, getRevenueChart);
+router.get("/funnel", protect, adminPanelAccess, getConversionFunnel);
+router.get("/elite-performers", protect, adminPanelAccess, getElitePerformers);
+router.get("/referral-stream", protect, adminPanelAccess, getReferralStream);
 
 export default router;

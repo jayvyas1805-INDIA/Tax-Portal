@@ -54,7 +54,7 @@
   margin:0;
   font-size:22px;
   font-weight:700;
-  color:#1f2937;
+  color: var(--text-heading);
 }
 
 .close-btn{
@@ -66,7 +66,8 @@
 
   cursor:pointer;
 
-  background:#f3f4f6;
+  background: var(--bg-subtle);
+  color:var(--text-secondary);
 
   font-size:24px;
 
@@ -105,7 +106,7 @@
 }
 
 .detail-row strong{
-  color:#111827;
+  color: var(--text-heading);
   font-weight:600;
 }
 
@@ -122,7 +123,7 @@
 
   padding:14px;
 
-  background:#f9fafb;
+  background: var(--bg-subtle);
 
   border:1px solid var(--border);
 
@@ -139,12 +140,14 @@
 
 .detail-row select{
   width:220px;
+  background:var(--bg-surface);
+  color:var(--text-heading);
 
   padding:10px 12px;
 
   border-radius:8px;
 
-  border:1px solid #d1d5db;
+  border: 1px solid var(--border);
 
   outline:none;
 
@@ -196,7 +199,7 @@
 
 .cancel-btn{
 
-  background:#f3f4f6;
+  background: var(--bg-subtle);
 
   color:var(--text-secondary);
 }
@@ -235,7 +238,7 @@
 }
 
 .referral-modal::-webkit-scrollbar-thumb{
-  background:#cbd5e1;
+  background:var(--scrollbar-thumb);
   border-radius:20px;
 }
 

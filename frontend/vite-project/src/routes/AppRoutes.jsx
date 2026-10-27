@@ -29,6 +29,8 @@ import NotificationCenter from "../pages/Admin/NotificationCenter";
 import Settings from "../pages/Admin/Settings";
 import ConvertReferralLead from "../pages/Admin/ConvertReferralLead";
 import ReviewFeedback from "../pages/Admin/ReviewFeedback";
+import CdoManagement from "../pages/Admin/CdoManagement";
+import RoleRoute from "./RoleRoute";
 
 import { Navigate } from "react-router-dom";
 const AppRoutes = () => {
@@ -112,26 +114,34 @@ const AppRoutes = () => {
         }
       />
 
-      {/* Admin routes */}
+      {/* Admin routes — super admin ("admin") and manager ("admin_cdo") */}
       <Route
         path="/admin"
         element={
-          <PrivateRoute allowedRoles={["admin"]}>
+          <PrivateRoute allowedRoles={["admin", "admin_cdo"]}>
             <AdminLayout />
           </PrivateRoute>
         }
       >
         <Route index element={<Navigate to="dashboard" replace />} />
+
+        {/* Visible to both Admin and Admin CDO */}
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="partner-management" element={<PartnerManagement />} />
         <Route path="referral-management" element={<ReferralManagement />} />
-        <Route path="commission-management" element={<CommissionManagementA />} />
-        <Route path="business-management" element={<BusinessManagement />} />
-        <Route path="reports-analytics" element={<ReportsAnalytics />} />
-        <Route path="notification-center" element={<NotificationCenter />} />
-        <Route path="settings" element={<Settings />} />
         <Route path="referral-management/convert/:referralId" element={<ConvertReferralLead />} />
-        <Route path="review-feedback" element={<ReviewFeedback />} />
+
+        {/* Super admin only — Admin CDO is bounced back to the dashboard */}
+        <Route element={<RoleRoute allowedRoles={["admin"]} />}>
+          <Route path="cdo-management" element={<CdoManagement />} />
+          <Route path="commission-management" element={<CommissionManagementA />} />
+          <Route path="business-management" element={<BusinessManagement />} />
+          <Route path="reports-analytics" element={<ReportsAnalytics />} />
+          <Route path="notification-center" element={<NotificationCenter />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="review-feedback" element={<ReviewFeedback />} />
+        </Route>
+
         <Route path="*" element={<NotFound />} />
       </Route>
 

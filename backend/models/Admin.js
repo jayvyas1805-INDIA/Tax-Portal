@@ -25,10 +25,20 @@ const adminSchema = new mongoose.Schema(
       select: false,
     },
 
+    // "admin"     -> super admin, full access to every admin page
+    // "admin_cdo" -> manager; only Dashboard, Partner Management and
+    //                Referral Management. Created from the admin panel.
     role: {
       type: String,
-      enum: ["admin"],
+      enum: ["admin", "admin_cdo"],
       default: "admin",
+    },
+
+    // Which super admin registered this account (set for admin_cdo users)
+    createdBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Admin",
+      default: null,
     },
 
     isActive: {

@@ -84,7 +84,7 @@
 }
 
 .cm-card__value.is-warn {
-  color: #d9433f;
+  color: var(--danger-text);
 }
 
 .cm-card__note {
@@ -94,7 +94,7 @@
 }
 
 .cm-card__note.is-up {
-  color: #1f9d55;
+  color: var(--success-text);
 }
 
 .cm-card__row {
@@ -337,7 +337,7 @@
 }
 
 .cm__state--error {
-  color: #d0342c;
+  color: var(--danger-text);
 }
 
 .cm__rules-note {
@@ -345,7 +345,7 @@
   font-size: 11.5px;
   color: var(--text-muted);
   background: var(--bg-subtle);
-  border: 1px dashed #dfe3ee;
+  border: 1px dashed var(--border);
   border-radius: 8px;
   padding: 10px 12px;
 }

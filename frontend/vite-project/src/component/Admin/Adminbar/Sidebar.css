@@ -158,7 +158,7 @@
   .admin-sidebar__toggle {
     display: flex;
     background: transparent;
-    color: #111a2e;
+    color: var(--text-heading);
     font-size: 1.5rem;
   }
 

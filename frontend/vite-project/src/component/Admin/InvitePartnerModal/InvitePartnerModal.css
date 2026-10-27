@@ -34,11 +34,11 @@
   font-size: 22px;
   line-height: 1;
   cursor: pointer;
-  color: #888;
+  color: var(--text-muted);
 }
 
 .ipm__subtitle {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 13.5px;
   margin: 8px 0 20px;
 }
@@ -55,15 +55,17 @@
   gap: 6px;
   font-size: 13px;
   font-weight: 600;
-  color: #333;
+  color: var(--text-heading);
 }
 
 .ipm__label input {
   font-weight: 400;
   padding: 10px 12px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 8px;
   font-size: 14px;
+  background: var(--bg-surface);
+  color: var(--text-heading);
 }
 
 .ipm__label input:focus {
@@ -76,8 +78,8 @@
   margin: 0;
 }
 
-.ipm__message--error { color: #dc2626; }
-.ipm__message--success { color: #1c9a53; }
+.ipm__message--error { color: var(--danger-text); }
+.ipm__message--success { color: var(--success-text); }
 
 .ipm__actions {
   display: flex;
@@ -95,8 +97,8 @@
 }
 
 .ipm__btn--ghost {
-  background: #f3f3f5;
-  color: #333;
+  background: var(--bg-subtle);
+  color: var(--text-heading);
 }
 
 .ipm__btn--primary {

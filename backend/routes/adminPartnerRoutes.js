@@ -1,6 +1,6 @@
 import express from "express";
 import { protect } from "../middleware/authMiddleware.js";
-import { adminOnly } from "../middleware/adminMiddleware.js";
+import { adminPanelAccess } from "../middleware/adminMiddleware.js";
 import {
   getPartnerStats,
   getPartners,
@@ -16,13 +16,13 @@ const router = express.Router();
 
 // NOTE: /stats and /export must come before the /:id param route, or Express
 // will treat "stats"/"export" as an :id value.
-router.get("/stats", protect, adminOnly, getPartnerStats);
-router.get("/export", protect, adminOnly, exportPartners);
-router.get("/", protect, adminOnly, getPartners);
-router.get("/:id", protect, adminOnly, getPartnerById);
-router.patch("/:id/status", protect, adminOnly, updatePartnerAccountStatus);
-router.patch("/:id/kyc/:docType", protect, adminOnly, updateKycDocumentStatus);
-router.patch("/:id/banking", protect, adminOnly, updateBankingVerification);
-router.patch("/:id/application-status", protect, adminOnly, updateApplicationStatus);
+router.get("/stats", protect, adminPanelAccess, getPartnerStats);
+router.get("/export", protect, adminPanelAccess, exportPartners);
+router.get("/", protect, adminPanelAccess, getPartners);
+router.get("/:id", protect, adminPanelAccess, getPartnerById);
+router.patch("/:id/status", protect, adminPanelAccess, updatePartnerAccountStatus);
+router.patch("/:id/kyc/:docType", protect, adminPanelAccess, updateKycDocumentStatus);
+router.patch("/:id/banking", protect, adminPanelAccess, updateBankingVerification);
+router.patch("/:id/application-status", protect, adminPanelAccess, updateApplicationStatus);
 
 export default router;
